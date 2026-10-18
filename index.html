@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James Laprocido | Finance and Analytics</title>
+  <meta name="description" content="James Laprocido is a financial analyst in Austin, TX. Trading algorithm, go-to-market case study, and equity research.">
+  <link rel="canonical" href="https://jlaprocido.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="James Laprocido | Finance and Analytics">
+  <meta property="og:description" content="Turning messy financials into actionable data, repeatably, at scale.">
+  <meta property="og:url" content="https://jlaprocido.github.io/">
+  <meta property="og:image" content="https://jlaprocido.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top">James Laprocido</a>
+      <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
+      <nav class="nav__menu" id="menu" aria-label="Primary">
+        <a href="#trading">Trading algorithm</a>
+        <a href="#gtm">Go-to-market</a>
+        <a href="#research">Equity research</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <h1 class="hero__name">James Laprocido</h1>
+        <p class="hero__tagline">Turning messy financials into actionable data, repeatably, at scale.</p>
+        <p class="hero__role">Financial Analyst at Lightspeed Systems in Austin, Texas. CFA Level 2 candidate.</p>
+        <div class="actions">
+          <a class="btn btn--solid" href="assets/resume.pdf" download>Download resume</a>
+          <a class="btn btn--line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <figure class="ledger" id="ledger" aria-label="Example of raw financial export cleaned into a board-ready table">
+        <figcaption class="ledger__title">Month-end P&amp;L: raw export to board-ready</figcaption>
+        <table class="ledger__table">
+          <thead><tr><th scope="col">Line item</th><th scope="col" class="num">Actual</th><th scope="col" class="num">vs. forecast</th></tr></thead>
+          <tbody>
+            <tr><td>Revenue</td><td class="num">$4,812K</td><td class="num fav">+2.4%</td></tr>
+            <tr><td>Hosting cost</td><td class="num">$318K</td><td class="num unfav">+1.2%</td></tr>
+            <tr><td>Sales and marketing</td><td class="num">$906K</td><td class="num fav">&minus;3.1%</td></tr>
+            <tr class="ledger__total"><td>EBITDA</td><td class="num">$1,274K</td><td class="num fav">+5.8%</td></tr>
+          </tbody>
+        </table>
+        <p class="ledger__note">Illustrative sample data. The workflow is the point: pull, clean, reconcile, explain.</p>
+      </figure>
+    </section>
+
+    <section class="results" aria-label="Selected results">
+      <dl class="results__list">
+        <div><dt class="results__num">~8 hrs</dt><dd>of weekly board and lender report prep automated with Python, Excel, and Claude</dd></div>
+        <div><dt class="results__num">~5 hrs</dt><dd>of weekly pipeline reporting replaced by a live Sigma dashboard on Snowflake</dd></div>
+        <div><dt class="results__num">3</dt><dd>M&amp;A targets modeled, including a tuck-in acquisition</dd></div>
+        <div><dt class="results__num">$250K</dt><dd>venture investment secured for a biotech startup through Tulane Ventures</dd></div>
+      </dl>
+    </section>
+
+    <section class="section about">
+      <img class="about__photo" src="assets/img/headshot.jpg" width="280" height="280" alt="James Laprocido smiling in a collared shirt and tie">
+      <div class="about__text">
+        <h2 class="h2">What I do</h2>
+        <p>At Lightspeed Systems I own the bi-weekly EBITDA forecast, the month-end P&amp;L, and a full three-statement model. I present the variance story to the executive team and build the sales pipeline forecast leadership uses every week.</p>
+        <p>Before that I did private equity at El Toro Capital, venture capital at Tulane Ventures, and investment analysis at National Western Life. I also played linebacker at Tulane, where we won the conference title and the Cotton Bowl.</p>
+        <p class="about__scope">The three projects below are my own work, done outside my role at Lightspeed.</p>
+      </div>
+    </section>
+
+    <section class="section project" id="trading">
+      <div class="project__head">
+        <h2 class="h2">Trading algorithm</h2>
+        <p class="project__kicker">An automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day.</p>
+      </div>
+      <div class="project__body">
+        <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
+          <div class="live__head">
+            <span class="live__status" id="live-status">Latest snapshot</span>
+            <span class="live__time" id="live-time">Updated Oct 16, 2026</span>
+          </div>
+          <dl class="live__grid">
+            <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
+            <div><dt>Total return</dt><dd data-key="Total PnL">&minus;0.43%</dd></div>
+            <div><dt>Drawdown</dt><dd data-key="Drawdown from Peak">4.43%</dd></div>
+            <div><dt>Sharpe ratio</dt><dd data-key="Sharpe Ratio">&minus;0.43</dd></div>
+          </dl>
+          <p class="live__foot">Paper trading since September 11, 2026. Not investment advice.</p>
+        </div>
+
+        <div class="prose">
+          <p>The live strategy is a two-moving-average crossover on AAPL at 2x leverage. Five research strategies, including Donchian breakout and Bollinger mean reversion, are tested with Monte Carlo permutation tests before they get near the live book.</p>
+          <ul class="plain">
+            <li>Risk controls: a max-drawdown kill switch, a daily loss limit, and an hourly intraday circuit breaker. The loss limit has already fired once, which is what it is there for.</li>
+            <li>GitHub Actions runs the daily rebalance, intraday checks, and end-of-day summary.</li>
+            <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
+          </ul>
+          <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
+          <div class="actions actions--left">
+            <a class="btn btn--solid" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a>
+            <a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project" id="gtm">
+      <div class="project__head">
+        <h2 class="h2">Go-to-market case study</h2>
+        <p class="project__kicker">A full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
+      </div>
+      <div class="project__body project__body--stack">
+        <ol class="stages">
+          <li class="stages__item"><h3 class="h3">Learn</h3><p>Start from existing customers and segments to see who buys and why.</p></li>
+          <li class="stages__item"><h3 class="h3">Define</h3><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
+          <li class="stages__item"><h3 class="h3">Prove</h3><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
+          <li class="stages__item"><h3 class="h3">Compound</h3><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
+        </ol>
+        <p class="prose-note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
+        <div class="actions actions--left">
+          <a class="btn btn--solid" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project" id="research">
+      <div class="project__head">
+        <h2 class="h2">Equity research</h2>
+        <p class="project__kicker">Three reports covering a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
+      </div>
+      <div class="project__body project__body--stack">
+        <ul class="reports">
+          <li class="report">
+            <a class="report__thumb" href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/alphabet-googl.jpg" width="240" height="180" loading="lazy" alt=""></a>
+            <div class="report__main">
+              <h3 class="h3"><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener">Alphabet Inc. (GOOGL), April 2025</a></h3>
+              <p>Search growth, AI leadership, and a rising Cloud segment support the rating. 9 pages.</p>
+            </div>
+            <p class="report__verdict"><span class="report__big">Buy</span>$186 target, 13.8% upside</p>
+          </li>
+          <li class="report">
+            <a class="report__thumb" href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/crowdstrike-lbo.jpg" width="240" height="180" loading="lazy" alt=""></a>
+            <div class="report__main">
+              <h3 class="h3"><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener">CrowdStrike (CRWD) LBO analysis, December 2024</a></h3>
+              <p>A buyout case for a high-growth cybersecurity leader after the July 2024 outage. 10 pages.</p>
+            </div>
+            <p class="report__verdict"><span class="report__big">$449.69</span>implied per share, 23% above market</p>
+          </li>
+          <li class="report">
+            <a class="report__thumb" href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/newpark-nr.jpg" width="240" height="180" loading="lazy" alt=""></a>
+            <div class="report__main">
+              <h3 class="h3"><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener">Newpark Resources (NR), November 2024</a></h3>
+              <p>A Burkenroad Report on the exit from fluids and the refocus on Industrial Solutions. 32 pages.</p>
+            </div>
+            <p class="report__verdict"><span class="report__big">Outperform</span>$10 target</p>
+          </li>
+        </ul>
+        <p class="prose-note">Educational work, not investment advice.</p>
+      </div>
+    </section>
+
+    <section class="section project" id="resume">
+      <div class="project__head">
+        <h2 class="h2">Resume</h2>
+        <p class="project__kicker">Based in Austin, Texas.</p>
+      </div>
+      <div class="project__body project__body--stack">
+        <ol class="jobs">
+          <li class="job job--current"><div><h3 class="h3">Financial Analyst</h3><p>Lightspeed Systems <span class="tag">Current role</span></p></div><p class="job__dates">June 2025 to present</p></li>
+          <li class="job"><div><h3 class="h3">Private Equity Intern Analyst</h3><p>El Toro Capital</p></div><p class="job__dates">December 2024 to May 2025</p></li>
+          <li class="job"><div><h3 class="h3">Venture Capital Analyst</h3><p>Tulane Ventures Fund</p></div><p class="job__dates">August 2024 to December 2024</p></li>
+          <li class="job"><div><h3 class="h3">Investment Analyst</h3><p>National Western Life</p></div><p class="job__dates">May 2024 to August 2024</p></li>
+          <li class="job"><div><h3 class="h3">Outside Linebacker</h3><p>Tulane University Football</p></div><p class="job__dates">August 2022 to February 2024</p></li>
+          <li class="job"><div><h3 class="h3">B.S. in Management, Finance</h3><p>Tulane University</p></div><p class="job__dates">August 2022 to May 2025</p></li>
+        </ol>
+        <div class="actions actions--left">
+          <a class="btn btn--solid" href="assets/resume.pdf" download>Download resume (PDF)</a>
+          <a class="btn btn--line" href="assets/resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+        </div>
+        <details class="preview" id="preview">
+          <summary>Preview the PDF here</summary>
+          <object class="preview__pdf" type="application/pdf" aria-label="Resume PDF preview"><p>Your browser cannot show the PDF. <a href="assets/resume.pdf">Download it instead.</a></p></object>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <h2 class="contact__title">Let's talk</h2>
+        <p class="contact__lede">I'm open to conversations about general finance, automation, investments, and analytics roles.</p>
+        <p class="contact__email">
+          <a href="mailto:jmjlaprocido@gmail.com">jmjlaprocido@gmail.com</a>
+          <button class="copy" type="button" id="copy" data-email="jmjlaprocido@gmail.com">Copy email</button>
+          <span class="copy__msg" id="copy-msg" role="status"></span>
+        </p>
+        <p class="contact__links">
+          <a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/jlaprocido" target="_blank" rel="noopener">GitHub</a>
+          <a href="assets/resume.pdf" download>Resume</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="yr">2026</span> James Laprocido. Last updated October 2026.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
