@@ -69,7 +69,11 @@ targets.forEach(t => t && spy.observe(t));
     if (!filled) throw new Error('no stats');
     box.classList.add('live--on');
     document.getElementById('live-status').textContent = 'Live from the dashboard';
-    if (updated) document.getElementById('live-time').textContent = 'Updated ' + updated;
+    if (updated) {
+      const t = new Date(updated.replace(' UTC', 'Z').replace(' ', 'T'));
+      const when = isNaN(t) ? updated : t.toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+      document.getElementById('live-time').textContent = 'Updated ' + when;
+    }
   } catch (err) {
     /* keep the snapshot already in the page */
   }
