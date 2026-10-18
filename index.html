@@ -28,9 +28,9 @@
       <a class="nav__brand" href="#top">James Laprocido</a>
       <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
       <nav class="nav__menu" id="menu" aria-label="Primary">
-        <a href="#trading">Trading algorithm</a>
-        <a href="#gtm">Go-to-market</a>
         <a href="#research">Equity research</a>
+        <a href="#gtm">Go-to-market</a>
+        <a href="#trading">Trading algorithm</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -73,75 +73,26 @@
       </dl>
     </section>
 
-    <section class="section about">
-      <img class="about__photo" src="assets/img/headshot.jpg" width="280" height="280" alt="James Laprocido smiling in a collared shirt and tie">
+    <section class="section about" id="about">
+      <img class="about__photo" src="assets/img/headshot.jpg" width="200" height="200" alt="James Laprocido smiling in a collared shirt and red tie">
       <div class="about__text">
-        <h2 class="h2">What I do</h2>
-        <p>At Lightspeed Systems I own the bi-weekly EBITDA forecast, the month-end P&amp;L, and a full three-statement model. I present the variance story to the executive team and build the sales pipeline forecast leadership uses every week.</p>
-        <p>Before that I did private equity at El Toro Capital, venture capital at Tulane Ventures, and investment analysis at National Western Life. I also played linebacker at Tulane, where we won the conference title and the Cotton Bowl.</p>
-        <p class="about__scope">The three projects below are my own work, done outside my role at Lightspeed.</p>
-      </div>
-    </section>
-
-    <section class="section project" id="trading">
-      <div class="project__head">
-        <h2 class="h2">Trading algorithm</h2>
-        <p class="project__kicker">An automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day.</p>
-      </div>
-      <div class="project__body">
-        <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
-          <div class="live__head">
-            <span class="live__status" id="live-status">Latest snapshot</span>
-            <span class="live__time" id="live-time">Updated Oct 16, 2026</span>
-          </div>
-          <dl class="live__grid">
-            <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
-            <div><dt>Total return</dt><dd data-key="Total PnL">&minus;0.43%</dd></div>
-            <div><dt>Drawdown</dt><dd data-key="Drawdown from Peak">4.43%</dd></div>
-            <div><dt>Sharpe ratio</dt><dd data-key="Sharpe Ratio">&minus;0.43</dd></div>
-          </dl>
-          <p class="live__foot">Paper trading since September 11, 2026. Not investment advice.</p>
-        </div>
-
-        <div class="prose">
-          <p>The live strategy is a two-moving-average crossover on AAPL at 2x leverage. Five research strategies, including Donchian breakout and Bollinger mean reversion, are tested with Monte Carlo permutation tests before they get near the live book.</p>
-          <ul class="plain">
-            <li>Risk controls: a max-drawdown kill switch, a daily loss limit, and an hourly intraday circuit breaker. The loss limit has already fired once, which is what it is there for.</li>
-            <li>GitHub Actions runs the daily rebalance, intraday checks, and end-of-day summary.</li>
-            <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
-          </ul>
-          <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
-          <div class="actions actions--left">
-            <a class="btn btn--solid" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a>
-            <a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section project" id="gtm">
-      <div class="project__head">
-        <h2 class="h2">Go-to-market case study</h2>
-        <p class="project__kicker">A full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
-      </div>
-      <div class="project__body project__body--stack">
-        <ol class="stages">
-          <li class="stages__item"><h3 class="h3">Learn</h3><p>Start from existing customers and segments to see who buys and why.</p></li>
-          <li class="stages__item"><h3 class="h3">Define</h3><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
-          <li class="stages__item"><h3 class="h3">Prove</h3><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
-          <li class="stages__item"><h3 class="h3">Compound</h3><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
-        </ol>
-        <p class="prose-note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
-        <div class="actions actions--left">
-          <a class="btn btn--solid" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a>
-        </div>
+        <h2 class="h2">Where this is going</h2>
+        <p>My goal is to learn and grow as much as I can. I think the future of finance belongs to people who can find the actionable data in the financials and also build the systems that act on it.</p>
+        <p>I already do both halves at Lightspeed Systems, where I own the forecast and the P&amp;L and have automated the board, lender, and pipeline reporting around them. My own projects push the same idea further, each one asking a different question:</p>
+        <ul class="thread">
+          <li class="thread__item"><a href="#research">Equity research</a><span>How do I become a better analyst?</span></li>
+          <li class="thread__item"><a href="#gtm">Go-to-market case study</a><span>How do I work out how to steer a business, and find the data to do it?</span></li>
+          <li class="thread__item"><a href="#trading">Trading algorithm</a><span>How do I combine my financial experience with technical ability, at scale?</span></li>
+        </ul>
+        <p class="about__scope">These projects are my own work, done outside my role at Lightspeed.</p>
       </div>
     </section>
 
     <section class="section project" id="research">
       <div class="project__head">
         <h2 class="h2">Equity research</h2>
-        <p class="project__kicker">Three reports covering a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
+        <p class="project__question">How do I become a better analyst?</p>
+        <p class="project__kicker">The practice: three reports across a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
       </div>
       <div class="project__body project__body--stack">
         <ul class="reports">
@@ -174,10 +125,67 @@
       </div>
     </section>
 
+    <section class="section project" id="gtm">
+      <div class="project__head">
+        <h2 class="h2">Go-to-market case study</h2>
+        <p class="project__question">How do I work out how to steer a business, and find the data to do it?</p>
+        <p class="project__kicker">The practice: a full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
+      </div>
+      <div class="project__body project__body--stack">
+        <ol class="stages">
+          <li class="stages__item"><h3 class="h3">Learn</h3><p>Start from existing customers and segments to see who buys and why.</p></li>
+          <li class="stages__item"><h3 class="h3">Define</h3><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
+          <li class="stages__item"><h3 class="h3">Prove</h3><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
+          <li class="stages__item"><h3 class="h3">Compound</h3><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
+        </ol>
+        <p class="prose-note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
+        <div class="actions actions--left">
+          <a class="btn btn--solid" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project" id="trading">
+      <div class="project__head">
+        <h2 class="h2">Trading algorithm</h2>
+        <p class="project__question">How do I combine my financial experience with technical ability, at scale?</p>
+        <p class="project__kicker">The practice: an automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day.</p>
+      </div>
+      <div class="project__body">
+        <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
+          <div class="live__head">
+            <span class="live__status" id="live-status">Latest snapshot</span>
+            <span class="live__time" id="live-time">Updated Oct 16, 2026</span>
+          </div>
+          <dl class="live__grid">
+            <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
+            <div><dt>Total return</dt><dd data-key="Total PnL">&minus;0.43%</dd></div>
+            <div><dt>Drawdown</dt><dd data-key="Drawdown from Peak">4.43%</dd></div>
+            <div><dt>Sharpe ratio</dt><dd data-key="Sharpe Ratio">&minus;0.43</dd></div>
+          </dl>
+          <p class="live__foot">Paper trading since September 11, 2026. Not investment advice.</p>
+        </div>
+
+        <div class="prose">
+          <p>The live strategy is a two-moving-average crossover on AAPL at 2x leverage. Five research strategies, including Donchian breakout and Bollinger mean reversion, are tested with Monte Carlo permutation tests before they get near the live book.</p>
+          <ul class="plain">
+            <li>Risk controls: a max-drawdown kill switch, a daily loss limit, and an hourly intraday circuit breaker. The loss limit has already fired once, which is what it is there for.</li>
+            <li>GitHub Actions runs the daily rebalance, intraday checks, and end-of-day summary.</li>
+            <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
+          </ul>
+          <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
+          <div class="actions actions--left">
+            <a class="btn btn--solid" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a>
+            <a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section project" id="resume">
       <div class="project__head">
         <h2 class="h2">Resume</h2>
-        <p class="project__kicker">Based in Austin, Texas.</p>
+        <p class="project__kicker">Based in Austin, Texas. Before finance I played linebacker at Tulane, where we won the conference title and the Cotton Bowl.</p>
       </div>
       <div class="project__body project__body--stack">
         <ol class="jobs">
