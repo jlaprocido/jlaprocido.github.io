@@ -1,235 +1,540 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>James Laprocido | Finance and Analytics</title>
-  <meta name="description" content="James Laprocido is a financial analyst in Austin, TX. Trading algorithm, go-to-market case study, and equity research.">
-  <link rel="canonical" href="https://jlaprocido.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="James Laprocido | Finance and Analytics">
-  <meta property="og:description" content="Turning messy financials into actionable data, repeatably, at scale.">
-  <meta property="og:url" content="https://jlaprocido.github.io/">
-  <meta property="og:image" content="https://jlaprocido.github.io/assets/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James Laprocido | Finance and Analytics</title>
+<meta name="description" content="James Laprocido is a financial analyst in Austin, TX. Resume, equity research, go-to-market case study, and a live trading algorithm.">
+<link rel="canonical" href="https://jlaprocido.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="James Laprocido | Finance and Analytics">
+<meta property="og:description" content="Turning messy financials into actionable data, repeatably, at scale.">
+<meta property="og:url" content="https://jlaprocido.github.io/">
+<meta property="og:image" content="https://jlaprocido.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap">
+<style>
+:root{--ink:#14233a;--paper:#f5f7fa;--panel:#fff;--rule:#d3dae4;--muted:#4a566a;--accent:#0a6a56;--soft:#e1f0ec;--btn:#14233a;--btnink:#fff;
+--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--ink:#e8edf4;--paper:#0f1722;--panel:#172233;--rule:#2a374a;--muted:#a9b4c4;--accent:#4fc9ab;--soft:#14342d;--btn:#e8edf4;--btnink:#0f1722;color-scheme:dark}}
+*{box-sizing:border-box}html{scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+[hidden]{display:none!important}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-underline-offset:3px}a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;z-index:100}.skip:focus{left:8px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+p{margin:0 0 1em;text-wrap:pretty}
+
+/* Header */
+.top{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--rule);z-index:5}
+.top__in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0 24px}
+.brand{font:600 1.25rem var(--serif);color:var(--ink);text-decoration:none;padding:14px 0;min-height:48px;display:inline-flex;align-items:center}
+.tabs{display:flex;gap:4px;overflow-x:auto}
+.tabs button{font:500 .95rem var(--sans);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:15px 14px;cursor:pointer;min-height:48px}
+.tabs button:hover{color:var(--ink)}.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
+.is-home .top{background:transparent;border-bottom-color:transparent}
+main{flex:1;width:100%}
+.view{max-width:1040px;margin:0 auto;padding:48px clamp(18px,4vw,48px) 64px}
+.is-home .view{padding:0}
+
+h2{font:500 clamp(1.9rem,3.4vw,2.6rem)/1.15 var(--serif);margin:0 0 .5em;letter-spacing:-.01em;text-wrap:balance}
+h3{font:600 1.15rem/1.3 var(--sans);margin:0}
+.eyebrow{font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--btn);color:var(--btnink);padding:12px 24px;border-radius:4px;text-decoration:none;font:500 1rem var(--sans);border:1px solid var(--btn);cursor:pointer}
+.btn:hover{color:var(--btnink);opacity:.88}
+.btn--line{background:none;color:var(--ink);border-color:var(--ink)}.btn--line:hover{color:var(--ink);background:var(--soft);opacity:1}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Home */
+.home{min-height:calc(100vh - 136px);display:flex;align-items:center}
+.home__in{width:100%;max-width:1040px;margin:0 auto;padding:40px clamp(18px,4vw,48px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:center}
+.home__name{font:700 clamp(2.4rem,6.4vw,5rem)/.94 var(--serif);letter-spacing:-.03em;text-transform:uppercase;margin:0 0 24px;white-space:nowrap}
+.home__name span{display:block}
+.home__role{font:600 clamp(1.1rem,2vw,1.4rem)/1.35 var(--sans);margin:0 0 6px}
+.home__sub{color:var(--muted);margin:0 0 32px;max-width:44ch}
+.frame{position:relative;margin:0 0 0 auto;width:100%;max-width:400px}
+.frame__img{position:relative}
+.frame__img::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--accent);border-radius:2px}
+.frame img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px}
+.frame figcaption{margin-top:28px;font-size:.88rem;color:var(--muted);text-align:right}
+
+/* About */
+.about{display:grid;grid-template-columns:340px minmax(0,1fr);gap:56px;align-items:start}
+.about__side{position:sticky;top:96px}
+.about__side img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:4px;border:1px solid var(--rule)}
+.facts{margin:20px 0 0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.facts span{color:var(--muted)}.facts b{font-weight:600;text-align:right}
+.about__lede{font:400 clamp(1.25rem,2vw,1.5rem)/1.45 var(--serif);margin:0 0 1em}
+.about__text p{max-width:62ch}
+.sub{margin:36px 0 12px;font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.thread{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.thread li{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.thread b{font-weight:600}.thread span{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--panel);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;font-size:.92rem}
+
+/* Carousel */
+.car{margin-top:64px}
+.car__view{overflow:hidden;touch-action:pan-y;margin-top:14px}
+.car__track{list-style:none;margin:0;padding:0;display:flex;gap:14px;will-change:transform}
+.car__slide{flex:0 0 min(46%,420px);height:300px;border-radius:4px;overflow:hidden;background:var(--rule)}
+.car__slide img{width:100%;height:100%;object-fit:cover}
+.car__bar{display:flex;align-items:center;gap:12px;margin-top:14px}
+.car__count{font:500 .9rem var(--sans);color:var(--muted);min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
+.car__bar button{width:48px;height:48px;border-radius:50%;border:1px solid var(--rule);background:var(--panel);color:var(--ink);font-size:1.1rem;cursor:pointer}
+.car__bar button:hover{border-color:var(--accent);color:var(--accent)}
+.car__bar .car__play{margin-left:auto;font-size:.8rem}
+
+/* Resume accordion */
+.rhead{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.rhead h2{margin:0}
+.xps{list-style:none;margin:0 0 32px;padding:0;border-top:1px solid var(--rule)}
+.xp{border-bottom:1px solid var(--rule)}.xp__h{margin:0;font:inherit}
+.xp__btn{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:190px minmax(0,1fr) 28px;gap:24px;align-items:start;padding:22px 4px;cursor:pointer}
+.xp__btn:hover .xp__title{color:var(--accent)}
+.xp__btn:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.xp__dates{color:var(--muted);font-size:.9rem;padding-top:4px}
+.xp__main{display:flex;flex-direction:column}.xp__title{font:600 1.2rem/1.3 var(--sans)}.xp__org{color:var(--accent);font-weight:500}
+.xp__chev{width:12px;height:12px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-top:8px;transition:transform .25s}
+.is-open .xp__chev{transform:rotate(-135deg);margin-top:14px}
+/* default: CSS-only height animation. With Pretext (.js-pretext) heights are computed exactly. */
+.xp__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.is-open .xp__panel{grid-template-rows:1fr}
+.xp__inner{overflow:hidden;padding:0 4px 0 214px;min-height:0}
+.is-open .xp__inner{padding-bottom:26px}
+.js-pretext .xp__panel{display:block;height:0;overflow:hidden;transition:height .3s ease}
+.js-pretext .xp__inner{padding-bottom:26px}
+.xp__loc{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.xp__list{margin:0 0 14px;padding-left:1.1em}.xp__list li{margin:0 0 8px;max-width:68ch}
+.xp__tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.xp__tags li{background:var(--soft);color:var(--accent);border-radius:999px;padding:3px 12px;font-size:.85rem;font-weight:500}
+.rmore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 32px}
+.rmore h3{font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.rmore p{margin:0;font-size:.95rem}
+
+/* Projects */
+.pnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;padding:0;list-style:none}
+.pnav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500;background:var(--panel)}
+.pnav a:hover{border-color:var(--accent);color:var(--accent)}
+.proj{padding:8px 0 48px;border-top:1.5px solid var(--ink);margin-top:8px}
+.proj__q{font:italic 500 1.2rem var(--serif);color:var(--accent);margin:.2em 0 .6em}
+.proj__k{color:var(--muted);max-width:68ch}
+.reports{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--rule)}
+.report{display:grid;grid-template-columns:104px minmax(0,1fr) 170px;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--rule)}
+.report img{width:104px;height:78px;object-fit:cover;border:1px solid var(--rule);border-radius:2px}
+.report p{margin:.3em 0 0;color:var(--muted);font-size:.95rem}
+.report h4{margin:0;font:600 1.1rem/1.3 var(--sans)}.report h4 a{color:var(--ink)}.report h4 a:hover{color:var(--accent)}
+.report__v{margin:0!important;font-size:.85rem!important;line-height:1.35}
+.report__big{display:block;font:500 1.5rem/1.15 var(--serif);color:var(--accent)}
+.note{color:var(--muted);font-size:.9rem;margin:16px 0 0}
+.stages{list-style:none;counter-reset:stage;margin:20px 0 16px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--rule);border-radius:4px;background:var(--panel)}
+.stages li{counter-increment:stage;padding:22px 24px;border-bottom:1px solid var(--rule)}
+.stages li:nth-child(odd){border-right:1px solid var(--rule)}.stages li:nth-last-child(-n+2){border-bottom:0}
+.stages h4{margin:0;font:600 1.1rem var(--sans)}.stages h4::before{content:counter(stage) ". ";color:var(--accent)}
+.stages p{margin:.4em 0 0;color:var(--muted);font-size:.97rem}
+.live{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:20px 0 24px}
+.live__head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.live__status{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--ink)}
+.live__status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.live--on .live__status::before{background:var(--accent)}
+.live__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:16px 0 0}
+.live__grid dt{font-size:.85rem;color:var(--muted)}
+.live__grid dd{margin:2px 0 0;font:500 1.6rem/1.2 var(--serif);font-variant-numeric:tabular-nums lining-nums}
+.live__foot{font-size:.85rem;color:var(--muted);margin:16px 0 0}
+.plain{margin:0 0 1em;padding-left:1.1em;max-width:68ch}.plain li{margin-bottom:.5em}
+.stack{color:var(--muted);font-size:.95rem}
+
+/* Contact */
+.mail{font:500 clamp(1.4rem,3vw,2rem) var(--serif);margin:0 0 1em}
+.mail a{color:var(--accent)}
+.copy{margin-left:12px;font:500 .9rem var(--sans);background:none;border:1px solid var(--rule);color:var(--ink);border-radius:4px;padding:8px 14px;min-height:44px;cursor:pointer;vertical-align:middle}
+.copy:hover{border-color:var(--accent)}
+.links{display:flex;gap:24px;flex-wrap:wrap;margin:0}.links a{display:inline-flex;min-height:44px;align-items:center}
+
+/* Footer */
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;padding-bottom:20px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--rule)}
+.social{display:flex;gap:8px;align-items:center}.social a{color:var(--muted);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px}.social a:hover{color:var(--accent)}
+.social svg{width:22px;height:22px;fill:currentColor}
+
+@media(max-width:860px){
+  .home{min-height:0}.home__in{grid-template-columns:1fr;gap:40px;padding-top:24px;padding-bottom:48px}
+  .frame{margin:0;max-width:300px}.frame figcaption{text-align:left}
+  .about{grid-template-columns:1fr;gap:28px}.about__side{position:static;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start}
+  .about__side img{aspect-ratio:1/1}.facts{margin:0}
+  .thread li{grid-template-columns:1fr;gap:2px}
+  .car__slide{flex-basis:80%;height:240px}
+  .xp__btn{grid-template-columns:minmax(0,1fr) 28px;gap:4px 12px}.xp__dates{grid-column:1;grid-row:1}.xp__main{grid-column:1;grid-row:2}
+  .xp__chev{grid-column:2;grid-row:1 / span 2;align-self:center;margin-top:0}.is-open .xp__chev{margin-top:6px}
+  .xp__inner{padding-left:4px}.rmore{grid-template-columns:1fr}
+  .report{grid-template-columns:96px minmax(0,1fr)}.report img{width:96px;height:72px}.report__v{grid-column:2}
+  .stages{grid-template-columns:1fr}.stages li,.stages li:nth-child(odd){border-right:0;border-bottom:1px solid var(--rule)}.stages li:last-child{border-bottom:0}
+  .live__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){.about__side{grid-template-columns:1fr}.about__side img{max-width:220px}.view{padding-top:32px}}
+@media(prefers-reduced-motion:reduce){.xp__panel,.xp__chev,.js-pretext .xp__panel{transition:none}}
+</style>
+<noscript><style>[hidden]{display:block!important}.xp__panel{grid-template-rows:1fr!important}</style></noscript>
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+<body class="is-home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap top__in"><a class="brand" href="#" data-goto="home">James Laprocido</a>
+<nav aria-label="Primary"><div class="tabs" role="tablist" aria-label="Sections">
+<button role="tab" id="t-about" aria-controls="about">About</button>
+<button role="tab" id="t-resume" aria-controls="resume">Resume</button>
+<button role="tab" id="t-projects" aria-controls="projects">Projects</button>
+<button role="tab" id="t-contact" aria-controls="contact">Contact</button></div></nav></div></header>
+<main id="main">
+<section id="home" class="home" role="tabpanel" aria-label="Home"><div class="home__in"><div class="home__text">
+  <h1 class="home__name" id="name" aria-label="James Laprocido"><span aria-hidden="true">James</span><span aria-hidden="true">Laprocido</span></h1>
+  <p class="home__role">Financial Analyst @ Lightspeed Systems</p>
+  <p class="home__sub">Turning messy financials into actionable data, repeatably and at scale.</p>
+  <div class="actions"><a class="btn" href="#about" data-goto="about">About me</a><a class="btn btn--line" href="#resume" data-goto="resume">Resume</a><a class="btn btn--line" href="#projects" data-goto="projects">Projects</a></div>
+</div>
+<figure class="frame"><div class="frame__img"><img src="assets/img/headshot.jpg" width="400" height="500" alt="James Laprocido smiling in a collared shirt and red tie"></div><figcaption>B.S. Management, Finance @ Tulane &middot; CFA Level 2 candidate</figcaption></figure></div></section>
+<section id="about" class="view" role="tabpanel" aria-labelledby="t-about" hidden>
+<div class="about">
+  <aside class="about__side">
+    <img src="assets/img/headshot.jpg" width="340" height="425" alt="James Laprocido smiling in a collared shirt and red tie">
+    <ul class="facts">
+      <li><span>Based in</span><b>Austin, Texas</b></li>
+      <li><span>Working at</span><b>Lightspeed Systems</b></li>
+      <li><span>Studying</span><b>CFA Level 2, Nov 2026</b></li>
+      <li><span>Alma mater</span><b>Tulane University</b></li>
+      <li><span>Off the clock</span><b>Rugby, lifting, strategy games</b></li>
+    </ul>
+  </aside>
+  <div class="about__text">
+    <p class="eyebrow">About me</p>
+    <h2>Where this is going</h2>
+    <p class="about__lede">I turn messy financials into actionable data, repeatably and at scale.</p>
+    <p>My goal is to learn and grow as much as I can. I think the future of finance belongs to people who can find the actionable data in the financials and also build the systems that act on it.</p>
+    <p>I already do both halves at Lightspeed Systems, where I own the forecast and the P&amp;L and have automated the board, lender and pipeline reporting around them. I present the numbers to the executive team every month, which keeps me honest about whether the analysis actually changes a decision.</p>
+    <p>Before finance I played outside linebacker at Tulane, where we won the conference title and the Cotton Bowl. Forty hours a week of practice, film and travel on top of a finance degree taught me how to work to a schedule and show up when it is not fun. Now I'm applying that same work ethic to my career, and I'm aiming on going the distance.</p>
+    <h3 class="sub">What I'm building on the side</h3>
+    <ul class="thread">
+      <li><b><a href="#research" data-goto="research">Equity research</a></b><span>How do I become a better analyst?</span></li>
+      <li><b><a href="#gtm" data-goto="gtm">Go-to-market case study</a></b><span>How do I work out how to steer a business, and find the data to do it?</span></li>
+      <li><b><a href="#trading" data-goto="trading">Trading algorithm</a></b><span>How do I combine my financial experience with technical ability, at scale?</span></li>
+    </ul>
+    <p class="note">These projects are my own work, done outside my role at Lightspeed.</p>
+    <h3 class="sub">What I work with</h3>
+    <ul class="chips"><li>Financial modeling</li><li>FP&amp;A</li><li>M&amp;A</li><li>Variance analysis</li><li>Process automation</li><li>Data visualization</li><li>Excel</li><li>Python</li><li>Claude Code</li><li>Tableau</li><li>Sigma</li><li>Salesforce</li><li>Bloomberg Terminal</li><li>Oracle NetSuite</li></ul>
+    <div class="actions" style="margin-top:32px"><a class="btn" href="#resume" data-goto="resume">Walk through my resume</a><a class="btn btn--line" href="#contact" data-goto="contact">Get in touch</a></div>
+  </div>
+</div>
+<section class="car" data-carousel aria-roledescription="carousel" aria-label="Photos" tabindex="0">
+  <h3>A few photos</h3>
+  <div class="car__view"><ul class="car__track"><li class="car__slide"><img src="img/photo-01.jpg" width="420" height="300" alt="Selfie on a beach boardwalk with three friends"></li><li class="car__slide"><img src="img/photo-02.jpg" width="420" height="300" alt="Two dogs on a wood floor"></li><li class="car__slide"><img src="img/photo-03.jpg" width="420" height="300" alt="Graduation day downtown in cap and gown with family"></li><li class="car__slide"><img src="img/photo-04.jpg" width="420" height="300" alt="Friends posing with Santa at a mall"></li><li class="car__slide"><img src="img/photo-05.jpg" width="420" height="300" alt="Three friends outside a building at night"></li><li class="car__slide"><img src="img/photo-06.jpg" width="420" height="300" alt="Friends crowded together in a kitchen"></li><li class="car__slide"><img src="img/photo-07.jpg" width="420" height="300" alt="Two friends wearing Mardi Gras beads"></li><li class="car__slide"><img src="img/photo-08.jpg" width="420" height="300" alt="Holding a championship belt at an event"></li><li class="car__slide"><img src="img/photo-09.jpg" width="420" height="300" alt="Group in Halloween costumes"></li><li class="car__slide"><img src="img/photo-10.jpg" width="420" height="300" alt="Three friends smiling at a bar"></li><li class="car__slide"><img src="img/photo-11.jpg" width="420" height="300" alt="Five friends posing indoors"></li><li class="car__slide"><img src="img/photo-12.jpg" width="420" height="300" alt="Two people on an open field by the water"></li></ul></div>
+  <div class="car__bar">
+    <button type="button" class="car__prev" aria-label="Previous photo">&larr;</button>
+    <span class="car__count" aria-live="off"></span>
+    <button type="button" class="car__next" aria-label="Next photo">&rarr;</button>
+    <button type="button" class="car__play" aria-label="Pause photo slideshow">&#10074;&#10074;</button>
+  </div>
+</section>
+</section>
+<section id="resume" class="view" role="tabpanel" aria-labelledby="t-resume" hidden>
+<div class="rhead"><div><p class="eyebrow">Resume</p><h2>The path so far</h2></div>
+<button type="button" class="btn btn--line" id="xp-all" data-open="false">Expand all</button></div>
+<ol class="xps"><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp0" id="xb0"><span class="xp__dates">June 2025 to present</span><span class="xp__main"><span class="xp__title">Financial Analyst</span><span class="xp__org">Lightspeed Systems</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp0" role="region" aria-labelledby="xb0"><div class="xp__inner"><p class="xp__loc">Austin, Texas</p><ul class="xp__list"><li>Build and own the bi-weekly EBITDA forecast and month-end P&amp;L, including a full three-statement model with unit-level cost and revenue per product and per license.</li><li>Built revenue and EBITDA models and pro forma financial statements for 3 M&amp;A targets, including 1 tuck-in acquisition.</li><li>Semi-automated quarterly board reporting and monthly PE lender reporting with Python, Excel and Claude skills, cutting about 8 hours a week of manual prep. Author the MD&amp;A commentary, with review.</li><li>Lead the monthly budget meetings with the executive leadership team: present the P&amp;L, drive variance analysis, and steer the discussion on what changed and what needs to change.</li><li>Rebuilt the sales pipeline forecast as a live Sigma dashboard on Snowflake SQL for self-serve leadership visibility, saving about 5 hours a week. Led an intern through the integration build.</li><li>Built the 2026 Sales Plan across every product, team and sales type under low, mid and high retention scenarios.</li></ul><ul class="xp__tags"><li>FP&amp;A</li><li>M&amp;A modeling</li><li>Python</li><li>Snowflake</li><li>Sigma</li><li>Salesforce</li></ul></div></div></li><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp1" id="xb1"><span class="xp__dates">Dec 2024 to May 2025</span><span class="xp__main"><span class="xp__title">Private Equity Intern Analyst</span><span class="xp__org">El Toro Capital</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp1" role="region" aria-labelledby="xb1"><div class="xp__inner"><p class="xp__loc">Los Angeles, California (remote)</p><ul class="xp__list"><li>Researched and ran diligence across Digital Marketing, SaaS and Cybersecurity for ETC 1, the firm's $250M leveraged-buyout fund.</li><li>Led proprietary deal sourcing through targeted email campaigns, then ran management calls and financial and operational diligence on fund candidates.</li></ul><ul class="xp__tags"><li>Private equity</li><li>Due diligence</li><li>Deal sourcing</li></ul></div></div></li><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp2" id="xb2"><span class="xp__dates">Aug 2024 to Dec 2024</span><span class="xp__main"><span class="xp__title">Venture Capital Analyst</span><span class="xp__org">Tulane Ventures Fund</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp2" role="region" aria-labelledby="xb2"><div class="xp__inner"><p class="xp__loc">New Orleans, Louisiana</p><ul class="xp__list"><li>Picked as one of five from a pool of 3,000 business students for the inaugural Tulane Ventures class.</li><li>Secured a $250K investment for biotech startup BioPhoundry, Inc., after speaking with industry professionals and the company's C-suite for an in-depth industry, market and product analysis.</li><li>Drafted and presented investment memos on healthcare and AI startups, from $50K to $250K, to the Tulane investment committee.</li></ul><ul class="xp__tags"><li>Venture capital</li><li>Investment memos</li><li>Market analysis</li></ul></div></div></li><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp3" id="xb3"><span class="xp__dates">May 2024 to Aug 2024</span><span class="xp__main"><span class="xp__title">Investment Analyst</span><span class="xp__org">National Western Life</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp3" role="region" aria-labelledby="xb3"><div class="xp__inner"><ul class="xp__list"><li>Analyzed, adjusted and delivered margin calls to counterparties worth up to $5 million daily.</li><li>Calculated nominal amounts for options hedging totaling up to about $200 million a week. After hedging, served as a contact for counterparties in the call auction.</li><li>Researched and investigated companies and utilities to conduct general due diligence and recommended next steps.</li><li>Assisted in underwriting multiple retail and industrial real estate loans: ran due diligence on tenants and calculated an investment range from the cap rate, LTV rate and vacancy rate, among other inputs.</li></ul><ul class="xp__tags"><li>Options hedging</li><li>Margin calls</li><li>Real estate underwriting</li><li>Due diligence</li></ul></div></div></li><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp4" id="xb4"><span class="xp__dates">Aug 2022 to Feb 2024</span><span class="xp__main"><span class="xp__title">Outside Linebacker</span><span class="xp__org">Tulane University Football</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp4" role="region" aria-labelledby="xb4"><div class="xp__inner"><p class="xp__loc">New Orleans, Louisiana</p><ul class="xp__list"><li>Part of the greatest turnaround in college football history, winning both the American Athletic Conference Championship and the Cotton Bowl.</li><li>Scout Team Captain. Spent about 40 hours a week on conditioning, meetings and travel.</li><li>American Athletic Conference All-Academic Team, 2022 to 2024.</li></ul><ul class="xp__tags"><li>Leadership</li><li>Time management</li></ul></div></div></li><li class="xp"><h3 class="xp__h"><button type="button" class="xp__btn" aria-expanded="false" aria-controls="xp5" id="xb5"><span class="xp__dates">Aug 2022 to May 2025</span><span class="xp__main"><span class="xp__title">B.S. in Management, Finance</span><span class="xp__org">Tulane University</span></span><span class="xp__chev" aria-hidden="true"></span></button></h3><div class="xp__panel" id="xp5" role="region" aria-labelledby="xb5"><div class="xp__inner"><p class="xp__loc">New Orleans, Louisiana</p><ul class="xp__list"><li>Math focus: Linear Algebra, Discrete Mathematics, Calculus II, Statistics for Scientists.</li><li>Relevant courses: Burkenroad Reports, Distressed Debt, Venture Capital &amp; Angel Financing, Intermediate Accounting.</li><li>Study abroad in Australia, 2024: classes on the financial operations of sports facilities across the country.</li></ul></div></div></li></ol>
+<div class="rmore">
+  <div><h3>Certification</h3><p>Passed CFA Level 1. CFA Level 2 candidate, exam November 2026.</p></div>
+  <div><h3>Skills</h3><p>Financial modeling, FP&amp;A, M&amp;A, variance analysis, process automation, data visualization, cross-functional leadership.</p></div>
+  <div><h3>Tools</h3><p>Excel (advanced), Python (intermediate), Claude Code, Tableau, Sigma, Salesforce, Bloomberg Terminal, Oracle NetSuite.</p></div>
+</div>
+<div class="actions"><a class="btn" href="assets/resume.pdf" download>Download resume (PDF)</a><a class="btn btn--line" href="assets/resume.pdf" target="_blank" rel="noopener">Open in a new tab</a></div>
+</section>
+<section id="projects" class="view" role="tabpanel" aria-labelledby="t-projects" hidden>
+<p class="eyebrow">Projects</p><h2>Three questions, three projects</h2>
+<ul class="pnav"><li><a href="#research" data-goto="research">Equity research</a></li><li><a href="#gtm" data-goto="gtm">Go-to-market</a></li><li><a href="#trading" data-goto="trading">Trading algorithm</a></li></ul>
 
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="nav__brand" href="#top">James Laprocido</a>
-      <button class="nav__toggle" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
-      <nav class="nav__menu" id="menu" aria-label="Primary">
-        <a href="#research">Equity research</a>
-        <a href="#gtm">Go-to-market</a>
-        <a href="#trading">Trading algorithm</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<section class="proj" id="research">
+  <h3 style="font:500 1.7rem var(--serif)">Equity research</h3>
+  <p class="proj__q">How do I become a better analyst?</p>
+  <p class="proj__k">The practice: three reports across a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
+  <ul class="reports">
+    <li class="report"><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/alphabet-googl.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener">Alphabet Inc. (GOOGL), April 2025</a></h4><p>Search growth, AI leadership, and a rising Cloud segment support the rating. 9 pages.</p></div>
+      <p class="report__v"><span class="report__big">Buy</span>$186 target, 13.8% upside</p></li>
+    <li class="report"><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/crowdstrike-lbo.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener">CrowdStrike (CRWD) LBO analysis, December 2024</a></h4><p>A buyout case for a high-growth cybersecurity leader after the July 2024 outage. 10 pages.</p></div>
+      <p class="report__v"><span class="report__big">$449.69</span>implied per share, 23% above market</p></li>
+    <li class="report"><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/newpark-nr.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener">Newpark Resources (NR), November 2024</a></h4><p>A Burkenroad Report on the exit from fluids and the refocus on Industrial Solutions. 32 pages.</p></div>
+      <p class="report__v"><span class="report__big">Outperform</span>$10 target</p></li>
+  </ul>
+  <p class="note">Educational work, not investment advice.</p>
+</section>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero__text">
-        <h1 class="hero__name">James Laprocido</h1>
-        <p class="hero__tagline">Turning messy financials into actionable data, repeatably, at scale.</p>
-        <p class="hero__role">Financial Analyst at Lightspeed Systems in Austin, Texas. CFA Level 2 candidate.</p>
-        <div class="actions">
-          <a class="btn btn--solid" href="assets/resume.pdf" download>Download resume</a>
-          <a class="btn btn--line" href="#contact">Get in touch</a>
-        </div>
-      </div>
+<section class="proj" id="gtm">
+  <h3 style="font:500 1.7rem var(--serif)">Go-to-market case study</h3>
+  <p class="proj__q">How do I work out how to steer a business, and find the data to do it?</p>
+  <p class="proj__k">The practice: a full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
+  <ol class="stages">
+    <li><h4>Learn</h4><p>Start from existing customers and segments to see who buys and why.</p></li>
+    <li><h4>Define</h4><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
+    <li><h4>Prove</h4><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
+    <li><h4>Compound</h4><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
+  </ol>
+  <p class="note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
+  <div class="actions" style="margin-top:16px"><a class="btn" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a></div>
+</section>
 
-      <figure class="ledger" id="ledger" aria-label="Example of raw financial export cleaned into a board-ready table">
-        <figcaption class="ledger__title">Month-end P&amp;L: raw export to board-ready</figcaption>
-        <table class="ledger__table">
-          <thead><tr><th scope="col">Line item</th><th scope="col" class="num">Actual</th><th scope="col" class="num">vs. forecast</th></tr></thead>
-          <tbody>
-            <tr><td>Revenue</td><td class="num">$4,812K</td><td class="num fav">+2.4%</td></tr>
-            <tr><td>Hosting cost</td><td class="num">$318K</td><td class="num unfav">+1.2%</td></tr>
-            <tr><td>Sales and marketing</td><td class="num">$906K</td><td class="num fav">&minus;3.1%</td></tr>
-            <tr class="ledger__total"><td>EBITDA</td><td class="num">$1,274K</td><td class="num fav">+5.8%</td></tr>
-          </tbody>
-        </table>
-        <p class="ledger__note">Illustrative sample data. The workflow is the point: pull, clean, reconcile, explain.</p>
-      </figure>
-    </section>
+<section class="proj" id="trading">
+  <h3 style="font:500 1.7rem var(--serif)">Trading algorithm</h3>
+  <p class="proj__q">How do I combine my financial experience with technical ability, at scale?</p>
+  <p class="proj__k">The practice: an automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day.</p>
+  <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
+    <div class="live__head"><span class="live__status" id="live-status">Latest snapshot</span><span id="live-time">Updated Oct 16, 2026</span></div>
+    <dl class="live__grid">
+      <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
+      <div><dt>Total return</dt><dd data-key="Total PnL">&minus;0.43%</dd></div>
+      <div><dt>Drawdown</dt><dd data-key="Drawdown from Peak">4.43%</dd></div>
+      <div><dt>Sharpe ratio</dt><dd data-key="Sharpe Ratio">&minus;0.43</dd></div>
+    </dl>
+    <p class="live__foot">Paper trading since September 11, 2026. Not investment advice.</p>
+  </div>
+  <p>The live strategy is a two-moving-average crossover on AAPL at 2x leverage. Five research strategies, including Donchian breakout and Bollinger mean reversion, are tested with Monte Carlo permutation tests before they get near the live book.</p>
+  <ul class="plain">
+    <li>Risk controls: a max-drawdown kill switch, a daily loss limit, and an hourly intraday circuit breaker. The loss limit has already fired once, which is what it is there for.</li>
+    <li>GitHub Actions runs the daily rebalance, intraday checks, and end-of-day summary.</li>
+    <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
+  </ul>
+  <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
+  <div class="actions"><a class="btn" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a><a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a></div>
+</section>
+</section>
+<section id="contact" class="view" role="tabpanel" aria-labelledby="t-contact" hidden><p class="eyebrow">Contact</p><h2>Let's talk</h2>
+<p style="max-width:56ch">I'm open to conversations about general finance, automation, investments, and analytics roles.</p>
+<p class="mail"><a href="mailto:jmjlaprocido@gmail.com">jmjlaprocido@gmail.com</a><button class="copy" type="button" id="copy" data-email="jmjlaprocido@gmail.com">Copy email</button> <span id="copy-msg" role="status" style="font-size:.9rem;color:var(--muted);margin-left:8px"></span></p>
+<p class="links"><a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/jlaprocido" target="_blank" rel="noopener">GitHub</a><a href="assets/resume.pdf" download>Resume</a></p></section>
+</main>
+<footer class="wrap foot"><span>&copy; 2026 James Laprocido. Last updated October 2026.</span><span class="social"><a href="https://github.com/jlaprocido" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.54h.05c.53-1 1.83-2.04 3.77-2.04 4.03 0 4.78 2.65 4.78 6.1V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4z"/></svg></a><a href="mailto:jmjlaprocido@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20a1 1 0 011 1v12a1 1 0 01-1 1H2a1 1 0 01-1-1V6a1 1 0 011-1zm1.5 2v.4L12 13l8.5-5.6V7h-17zm17 2.8L12 15.4 3.5 9.8V17h17V9.8z"/></svg></a></span></footer>
+<script type="module">
+var x0=["BN","BN","BN","BN","BN","BN","BN","BN","BN","S","B","S","WS","B","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","B","B","B","S","WS","ON","ON","ET","ET","ET","ON","ON","ON","ON","ON","ON","CS","ON","CS","ON","EN","EN","EN","EN","EN","EN","EN","EN","EN","EN","ON","ON","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","ON","ON","ON","BN","BN","BN","BN","BN","BN","B","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","BN","CS","ON","ET","ET","ET","ET","ON","ON","ON","ON","L","ON","ON","ON","ON","ON","ET","ET","EN","EN","ON","L","ON","ON","ON","EN","L","ON","ON","ON","ON","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","ON","L","L","L","L","L","L","L","L"],g0=["AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","CS","AL","ON","ON","NSM","NSM","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AN","AN","AN","AN","AN","AN","AN","AN","AN","AN","ET","AN","AN","AL","AL","AL","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","NSM","ON","NSM","NSM","NSM","NSM","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL","AL"];function m0(O){if(O<=255)return x0[O];if(1424<=O&&O<=1524)return"R";if(1536<=O&&O<=1791)return g0[O&255];if(1792<=O&&O<=2220)return"AL";return"L"}function r0(O){let _=O.length;if(_===0)return null;let J=Array(_),Y=0;for(let V=0;V<_;V++){let $=m0(O.charCodeAt(V));if($==="R"||$==="AL"||$==="AN")Y++;J[V]=$}if(Y===0)return null;let X=_/Y<0.3?0:1,R=new Int8Array(_);for(let V=0;V<_;V++)R[V]=X;let Z=X&1?"R":"L",Q=Z,f=Q;for(let V=0;V<_;V++)if(J[V]==="NSM")J[V]=f;else f=J[V];f=Q;for(let V=0;V<_;V++){let $=J[V];if($==="EN")J[V]=f==="AL"?"AN":"EN";else if($==="R"||$==="L"||$==="AL")f=$}for(let V=0;V<_;V++)if(J[V]==="AL")J[V]="R";for(let V=1;V<_-1;V++){if(J[V]==="ES"&&J[V-1]==="EN"&&J[V+1]==="EN")J[V]="EN";if(J[V]==="CS"&&(J[V-1]==="EN"||J[V-1]==="AN")&&J[V+1]===J[V-1])J[V]=J[V-1]}for(let V=0;V<_;V++){if(J[V]!=="EN")continue;let $;for($=V-1;$>=0&&J[$]==="ET";$--)J[$]="EN";for($=V+1;$<_&&J[$]==="ET";$++)J[$]="EN"}for(let V=0;V<_;V++){let $=J[V];if($==="WS"||$==="ES"||$==="ET"||$==="CS")J[V]="ON"}f=Q;for(let V=0;V<_;V++){let $=J[V];if($==="EN")J[V]=f==="L"?"L":"EN";else if($==="R"||$==="L")f=$}for(let V=0;V<_;V++){if(J[V]!=="ON")continue;let $=V+1;while($<_&&J[$]==="ON")$++;let u=V>0?J[V-1]:Q,q=$<_?J[$]:Q,D=u!=="L"?"R":"L";if(D===(q!=="L"?"R":"L"))for(let K=V;K<$;K++)J[K]=D;V=$-1}for(let V=0;V<_;V++)if(J[V]==="ON")J[V]=Z;for(let V=0;V<_;V++){let $=J[V];if((R[V]&1)===0){if($==="R")R[V]++;else if($==="AN"||$==="EN")R[V]+=2}else if($==="L"||$==="AN"||$==="EN")R[V]++}return R}function u0(O,_){let J=r0(O);if(J===null)return null;let Y=new Int8Array(_.length);for(let X=0;X<_.length;X++)Y[X]=J[_[X]];return Y}var a0=/[ \t\n\r\f]+/g,s0=/[\t\n\r\f]| {2,}|^ | $/;function d0(O){let _=O??"normal";return _==="pre-wrap"?{mode:_,preserveOrdinarySpaces:!0,preserveHardBreaks:!0}:{mode:_,preserveOrdinarySpaces:!1,preserveHardBreaks:!1}}function i0(O){if(!s0.test(O))return O;let _=O.replace(a0," ");if(_.charCodeAt(0)===32)_=_.slice(1);if(_.length>0&&_.charCodeAt(_.length-1)===32)_=_.slice(0,-1);return _}function t0(O){if(!/[\r\f]/.test(O))return O.replace(/\r\n/g,`
+`);return O.replace(/\r\n/g,`
+`).replace(/[\r\f]/g,`
+`)}var d=null,V0;function n0(){if(d===null)d=new Intl.Segmenter(V0,{granularity:"word"});return d}function z0(){d=null}function j0(O){let _=O&&O.length>0?O:void 0;if(V0===_)return;V0=_,d=null}var e0=/\p{Script=Arabic}/u,O0=/\p{M}/u,b0=/\p{Nd}/u;function X0(O){return e0.test(O)}function p(O){for(let _ of O){let J=_.codePointAt(0);if(J>=19968&&J<=40959||J>=13312&&J<=19903||J>=131072&&J<=173791||J>=173824&&J<=177983||J>=177984&&J<=178207||J>=178208&&J<=183983||J>=183984&&J<=191471||J>=196608&&J<=201551||J>=63744&&J<=64255||J>=194560&&J<=195103||J>=12288&&J<=12351||J>=12352&&J<=12447||J>=12448&&J<=12543||J>=44032&&J<=55215||J>=65280&&J<=65519)return!0}return!1}var $0=new Set(["，","．","！","：","；","？","、","。","・","）","〕","〉","》","」","』","】","〗","〙","〛","ー","々","〻","ゝ","ゞ","ヽ","ヾ"]),i=new Set(['"',"(","[","{","“","‘","«","‹","（","〔","〈","《","「","『","【","〖","〘","〚"]),Q0=new Set(["'","’"]),r=new Set([".",",","!","?",":",";","،","؛","؟","।","॥","၊","။","၌","၍","၏",")","]","}","%",'"',"”","’","»","›","…"]),OO=new Set([":",".","،","؛"]),_O=new Set(["၏"]),JO=new Set(["”","’","»","›","」","』","】","》","〉","〕","）"]);function RO(O){if(q0(O))return!0;let _=!1;for(let J of O){if(r.has(J)){_=!0;continue}if(_&&O0.test(J))continue;return!1}return _}function VO(O){for(let _ of O)if(!$0.has(_)&&!r.has(_))return!1;return O.length>0}function XO(O){if(q0(O))return!0;for(let _ of O)if(!i.has(_)&&!Q0.has(_)&&!O0.test(_))return!1;return O.length>0}function q0(O){let _=!1;for(let J of O){if(J==="\\"||O0.test(J))continue;if(i.has(J)||r.has(J)||Q0.has(J)){_=!0;continue}return!1}return _}function YO(O){let _=Array.from(O),J=_.length;while(J>0){let Y=_[J-1];if(O0.test(Y)){J--;continue}if(i.has(Y)||Q0.has(Y)){J--;continue}break}if(J<=0||J===_.length)return null;return{head:_.slice(0,J).join(""),tail:_.slice(J).join("")}}function ZO(O,_){if(O.length===0)return!1;for(let J of O)if(J!==_)return!1;return!0}function $O(O){if(!X0(O)||O.length===0)return!1;return OO.has(O[O.length-1])}function QO(O){if(O.length===0)return!1;return _O.has(O[O.length-1])}function qO(O){if(O.length<2||O[0]!==" ")return null;let _=O.slice(1);if(/^\p{M}+$/u.test(_))return{space:" ",marks:_};return null}function D0(O){for(let _=O.length-1;_>=0;_--){let J=O[_];if(JO.has(J))return!0;if(!r.has(J))return!1}return!1}function DO(O,_){if(_.preserveOrdinarySpaces||_.preserveHardBreaks){if(O===" ")return"preserved-space";if(O==="\t")return"tab";if(_.preserveHardBreaks&&O===`
+`)return"hard-break"}if(O===" ")return"space";if(O===" "||O===" "||O==="⁠"||O==="\uFEFF")return"glue";if(O==="​")return"zero-width-break";if(O==="­")return"soft-hyphen";return"text"}function NO(O,_,J,Y){let X=[],R=null,Z="",Q=J,f=!1,V=0;for(let $ of O){let u=DO($,Y),q=u==="text"&&_;if(R!==null&&u===R&&q===f){Z+=$,V+=$.length;continue}if(R!==null)X.push({text:Z,isWordLike:f,kind:R,start:Q});R=u,Z=$,Q=J+V,f=q,V+=$.length}if(R!==null)X.push({text:Z,isWordLike:f,kind:R,start:Q});return X}function Y0(O){return O==="space"||O==="preserved-space"||O==="zero-width-break"||O==="hard-break"}var fO=/^[A-Za-z][A-Za-z0-9+.-]*:$/;function HO(O,_){let J=O.texts[_];if(J.startsWith("www."))return!0;return fO.test(J)&&_+1<O.len&&O.kinds[_+1]==="text"&&O.texts[_+1]==="//"}function UO(O){return O.includes("?")&&(O.includes("://")||O.startsWith("www."))}function MO(O){let _=O.texts.slice(),J=O.isWordLike.slice(),Y=O.kinds.slice(),X=O.starts.slice();for(let Z=0;Z<O.len;Z++){if(Y[Z]!=="text"||!HO(O,Z))continue;let Q=Z+1;while(Q<O.len&&!Y0(Y[Q])){_[Z]+=_[Q],J[Z]=!0;let f=_[Q].includes("?");if(Y[Q]="text",_[Q]="",Q++,f)break}}let R=0;for(let Z=0;Z<_.length;Z++){let Q=_[Z];if(Q.length===0)continue;if(R!==Z)_[R]=Q,J[R]=J[Z],Y[R]=Y[Z],X[R]=X[Z];R++}return _.length=R,J.length=R,Y.length=R,X.length=R,{len:R,texts:_,isWordLike:J,kinds:Y,starts:X}}function CO(O){let _=[],J=[],Y=[],X=[];for(let R=0;R<O.len;R++){let Z=O.texts[R];if(_.push(Z),J.push(O.isWordLike[R]),Y.push(O.kinds[R]),X.push(O.starts[R]),!UO(Z))continue;let Q=R+1;if(Q>=O.len||Y0(O.kinds[Q]))continue;let f="",V=O.starts[Q],$=Q;while($<O.len&&!Y0(O.kinds[$]))f+=O.texts[$],$++;if(f.length>0)_.push(f),J.push(!0),Y.push("text"),X.push(V),R=$-1}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}var FO=new Set([":","-","/","×",",",".","+","–","—"]),K0=/^[A-Za-z0-9_]+[,:;]*$/,vO=/[,:;]+$/;function E0(O){for(let _ of O)if(b0.test(_))return!0;return!1}function Z0(O){if(O.length===0)return!1;for(let _ of O){if(b0.test(_)||FO.has(_))continue;return!1}return!0}function uO(O){let _=[],J=[],Y=[],X=[];for(let R=0;R<O.len;R++){let Z=O.texts[R],Q=O.kinds[R];if(Q==="text"&&Z0(Z)&&E0(Z)){let f=Z,V=R+1;while(V<O.len&&O.kinds[V]==="text"&&Z0(O.texts[V]))f+=O.texts[V],V++;_.push(f),J.push(!0),Y.push("text"),X.push(O.starts[R]),R=V-1;continue}_.push(Z),J.push(O.isWordLike[R]),Y.push(Q),X.push(O.starts[R])}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}function KO(O){let _=[],J=[],Y=[],X=[];for(let R=0;R<O.len;R++){let Z=O.texts[R],Q=O.kinds[R],f=O.isWordLike[R];if(Q==="text"&&f&&K0.test(Z)){let V=Z,$=R+1;while(vO.test(V)&&$<O.len&&O.kinds[$]==="text"&&O.isWordLike[$]&&K0.test(O.texts[$]))V+=O.texts[$],$++;_.push(V),J.push(!0),Y.push("text"),X.push(O.starts[R]),R=$-1;continue}_.push(Z),J.push(f),Y.push(Q),X.push(O.starts[R])}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}function zO(O){let _=[],J=[],Y=[],X=[];for(let R=0;R<O.len;R++){let Z=O.texts[R];if(O.kinds[R]==="text"&&Z.includes("-")){let Q=Z.split("-"),f=Q.length>1;for(let V=0;V<Q.length;V++){let $=Q[V];if(!f)break;if($.length===0||!E0($)||!Z0($))f=!1}if(f){let V=0;for(let $=0;$<Q.length;$++){let u=Q[$],q=$<Q.length-1?`${u}-`:u;_.push(q),J.push(!0),Y.push("text"),X.push(O.starts[R]+V),V+=q.length}continue}}_.push(Z),J.push(O.isWordLike[R]),Y.push(O.kinds[R]),X.push(O.starts[R])}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}function jO(O){let _=[],J=[],Y=[],X=[],R=0;while(R<O.len){let Z=O.texts[R],Q=O.isWordLike[R],f=O.kinds[R],V=O.starts[R];if(f==="glue"){let $=Z,u=V;R++;while(R<O.len&&O.kinds[R]==="glue")$+=O.texts[R],R++;if(R<O.len&&O.kinds[R]==="text")Z=$+O.texts[R],Q=O.isWordLike[R],f="text",V=u,R++;else{_.push($),J.push(!1),Y.push("glue"),X.push(u);continue}}else R++;if(f==="text")while(R<O.len&&O.kinds[R]==="glue"){let $="";while(R<O.len&&O.kinds[R]==="glue")$+=O.texts[R],R++;if(R<O.len&&O.kinds[R]==="text"){Z+=$+O.texts[R],Q=Q||O.isWordLike[R],R++;continue}Z+=$}_.push(Z),J.push(Q),Y.push(f),X.push(V)}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}function bO(O){let _=O.texts.slice(),J=O.isWordLike.slice(),Y=O.kinds.slice(),X=O.starts.slice();for(let R=0;R<_.length-1;R++){if(Y[R]!=="text"||Y[R+1]!=="text")continue;if(!p(_[R])||!p(_[R+1]))continue;let Z=YO(_[R]);if(Z===null)continue;_[R]=Z.head,_[R+1]=Z.tail+_[R+1],X[R+1]=X[R]+Z.head.length}return{len:_.length,texts:_,isWordLike:J,kinds:Y,starts:X}}function EO(O,_,J){let Y=n0(),X=0,R=[],Z=[],Q=[],f=[];for(let q of Y.segment(O))for(let D of NO(q.segment,q.isWordLike??!1,q.index,J)){let b=D.kind==="text";if(_.carryCJKAfterClosingQuote&&b&&X>0&&Q[X-1]==="text"&&p(D.text)&&p(R[X-1])&&D0(R[X-1]))R[X-1]+=D.text,Z[X-1]=Z[X-1]||D.isWordLike;else if(b&&X>0&&Q[X-1]==="text"&&VO(D.text)&&p(R[X-1]))R[X-1]+=D.text,Z[X-1]=Z[X-1]||D.isWordLike;else if(b&&X>0&&Q[X-1]==="text"&&QO(R[X-1]))R[X-1]+=D.text,Z[X-1]=Z[X-1]||D.isWordLike;else if(b&&X>0&&Q[X-1]==="text"&&D.isWordLike&&X0(D.text)&&$O(R[X-1]))R[X-1]+=D.text,Z[X-1]=!0;else if(b&&!D.isWordLike&&X>0&&Q[X-1]==="text"&&D.text.length===1&&D.text!=="-"&&D.text!=="—"&&ZO(R[X-1],D.text))R[X-1]+=D.text;else if(b&&!D.isWordLike&&X>0&&Q[X-1]==="text"&&(RO(D.text)||D.text==="-"&&Z[X-1]))R[X-1]+=D.text;else R[X]=D.text,Z[X]=D.isWordLike,Q[X]=D.kind,f[X]=D.start,X++}for(let q=1;q<X;q++)if(Q[q]==="text"&&!Z[q]&&q0(R[q])&&Q[q-1]==="text")R[q-1]+=R[q],Z[q-1]=Z[q-1]||Z[q],R[q]="";for(let q=X-2;q>=0;q--)if(Q[q]==="text"&&!Z[q]&&XO(R[q])){let D=q+1;while(D<X&&R[D]==="")D++;if(D<X&&Q[D]==="text")R[D]=R[q]+R[D],f[D]=f[q],R[q]=""}let V=0;for(let q=0;q<X;q++){let D=R[q];if(D.length===0)continue;if(V!==q)R[V]=D,Z[V]=Z[q],Q[V]=Q[q],f[V]=f[q];V++}R.length=V,Z.length=V,Q.length=V,f.length=V;let $=jO({len:V,texts:R,isWordLike:Z,kinds:Q,starts:f}),u=bO(KO(zO(uO(CO(MO($))))));for(let q=0;q<u.len-1;q++){let D=qO(u.texts[q]);if(D===null)continue;if(u.kinds[q]!=="space"&&u.kinds[q]!=="preserved-space"||u.kinds[q+1]!=="text"||!X0(u.texts[q+1]))continue;u.texts[q]=D.space,u.isWordLike[q]=!1,u.kinds[q]=u.kinds[q]==="preserved-space"?"preserved-space":"space",u.texts[q+1]=D.marks+u.texts[q+1],u.starts[q+1]=u.starts[q]+D.space.length}return u}function GO(O,_){if(O.len===0)return[];if(!_.preserveHardBreaks)return[{startSegmentIndex:0,endSegmentIndex:O.len,consumedEndSegmentIndex:O.len}];let J=[],Y=0;for(let X=0;X<O.len;X++){if(O.kinds[X]!=="hard-break")continue;J.push({startSegmentIndex:Y,endSegmentIndex:X,consumedEndSegmentIndex:X+1}),Y=X+1}if(Y<O.len)J.push({startSegmentIndex:Y,endSegmentIndex:O.len,consumedEndSegmentIndex:O.len});return J}function N0(O,_,J="normal"){let Y=d0(J),X=Y.mode==="pre-wrap"?t0(O):i0(O);if(X.length===0)return{normalized:X,chunks:[],len:0,texts:[],isWordLike:[],kinds:[],starts:[]};let R=EO(X,_,Y);return{normalized:X,chunks:GO(R,Y),...R}}var a=null,f0=new Map,s=null,PO=/\p{Emoji_Presentation}/u,AO=/[\p{Emoji_Presentation}\p{Extended_Pictographic}\p{Regional_Indicator}\uFE0F\u20E3]/u,_0=null,H0=new Map;function U0(){if(a!==null)return a;if(typeof OffscreenCanvas<"u")return a=new OffscreenCanvas(1,1).getContext("2d"),a;if(typeof document<"u")return a=document.createElement("canvas").getContext("2d"),a;throw Error("Text measurement requires OffscreenCanvas or a DOM canvas context.")}function BO(O){let _=f0.get(O);if(!_)_=new Map,f0.set(O,_);return _}function x(O,_){let J=_.get(O);if(J===void 0)J={width:U0().measureText(O).width,containsCJK:p(O)},_.set(O,J);return J}function h(){if(s!==null)return s;if(typeof navigator>"u")return s={lineFitEpsilon:0.005,carryCJKAfterClosingQuote:!1,preferPrefixWidthsForBreakableRuns:!1,preferEarlySoftHyphenBreak:!1},s;let O=navigator.userAgent,J=navigator.vendor==="Apple Computer, Inc."&&O.includes("Safari/")&&!O.includes("Chrome/")&&!O.includes("Chromium/")&&!O.includes("CriOS/")&&!O.includes("FxiOS/")&&!O.includes("EdgiOS/"),Y=O.includes("Chrome/")||O.includes("Chromium/")||O.includes("CriOS/")||O.includes("Edg/");return s={lineFitEpsilon:J?0.015625:0.005,carryCJKAfterClosingQuote:Y,preferPrefixWidthsForBreakableRuns:J,preferEarlySoftHyphenBreak:J},s}function TO(O){let _=O.match(/(\d+(?:\.\d+)?)\s*px/);return _?parseFloat(_[1]):16}function M0(){if(_0===null)_0=new Intl.Segmenter(void 0,{granularity:"grapheme"});return _0}function wO(O){return PO.test(O)||O.includes("️")}function G0(O){return AO.test(O)}function yO(O,_){let J=H0.get(O);if(J!==void 0)return J;let Y=U0();Y.font=O;let X=Y.measureText("\uD83D\uDE00").width;if(J=0,X>_+0.5&&typeof document<"u"&&document.body!==null){let R=document.createElement("span");R.style.font=O,R.style.display="inline-block",R.style.visibility="hidden",R.style.position="absolute",R.textContent="\uD83D\uDE00",document.body.appendChild(R);let Z=R.getBoundingClientRect().width;if(document.body.removeChild(R),X-Z>0.5)J=X-Z}return H0.set(O,J),J}function LO(O){let _=0,J=M0();for(let Y of J.segment(O))if(wO(Y.segment))_++;return _}function WO(O,_){if(_.emojiCount===void 0)_.emojiCount=LO(O);return _.emojiCount}function g(O,_,J){if(J===0)return _.width;return _.width-WO(O,_)*J}function P0(O,_,J,Y){if(_.graphemeWidths!==void 0)return _.graphemeWidths;let X=[],R=M0();for(let Z of R.segment(O)){let Q=x(Z.segment,J);X.push(g(Z.segment,Q,Y))}return _.graphemeWidths=X.length>1?X:null,_.graphemeWidths}function A0(O,_,J,Y){if(_.graphemePrefixWidths!==void 0)return _.graphemePrefixWidths;let X=[],R=M0(),Z="";for(let Q of R.segment(O)){Z+=Q.segment;let f=x(Z,J);X.push(g(Z,f,Y))}return _.graphemePrefixWidths=X.length>1?X:null,_.graphemePrefixWidths}function B0(O,_){let J=U0();J.font=O;let Y=BO(O),X=TO(O),R=_?yO(O,X):0;return{cache:Y,fontSize:X,emojiCorrection:R}}function T0(){f0.clear(),H0.clear(),_0=null}function m(O){return O==="space"||O==="preserved-space"||O==="tab"||O==="zero-width-break"||O==="soft-hyphen"}function SO(O){return O==="space"}function w0(O,_){if(_<=0)return 0;let J=O%_;if(Math.abs(J)<=0.000001)return _;return _-J}function t(O,_,J,Y){if(!Y||_===null)return O[J];return _[J]-(J>0?_[J-1]:0)}function y0(O,_,J,Y,X,R){let Z=0,Q=_;while(Z<O.length){let f=R?_+O[Z]:Q+O[Z];if((Z+1<O.length?f+X:f)>J+Y)break;Q=f,Z++}return{fitCount:Z,fittedWidth:Q}}function L0(O,_){for(let J=0;J<O.chunks.length;J++){let Y=O.chunks[J];if(_<Y.consumedEndSegmentIndex)return J}return-1}function kO(O,_){let{segmentIndex:J,graphemeIndex:Y}=_;if(J>=O.widths.length)return null;if(Y>0)return _;let X=L0(O,J);if(X<0)return null;let R=O.chunks[X];if(R.startSegmentIndex===R.endSegmentIndex&&J===R.startSegmentIndex)return{segmentIndex:J,graphemeIndex:0};if(J<R.startSegmentIndex)J=R.startSegmentIndex;while(J<R.endSegmentIndex){let Z=O.kinds[J];if(Z!=="space"&&Z!=="zero-width-break"&&Z!=="soft-hyphen")return{segmentIndex:J,graphemeIndex:0};J++}if(R.consumedEndSegmentIndex>=O.widths.length)return null;return{segmentIndex:R.consumedEndSegmentIndex,graphemeIndex:0}}function W0(O,_){if(O.simpleLineWalkFastPath)return IO(O,_);return J0(O,_)}function IO(O,_){let{widths:J,kinds:Y,breakableWidths:X,breakablePrefixWidths:R}=O;if(J.length===0)return 0;let Z=h(),Q=Z.lineFitEpsilon,f=0,V=0,$=!1;function u(q){let D=J[q];if(D>_&&X[q]!==null){let b=X[q],K=R[q]??null;V=0;for(let j=0;j<b.length;j++){let B=t(b,K,j,Z.preferPrefixWidthsForBreakableRuns);if(V>0&&V+B>_+Q)f++,V=B;else{if(V===0)f++;V+=B}}}else V=D,f++;$=!0}for(let q=0;q<J.length;q++){let D=J[q],b=Y[q];if(!$){u(q);continue}let K=V+D;if(K>_+Q){if(SO(b))continue;V=0,$=!1,u(q);continue}V=K}if(!$)return f+1;return f}function cO(O,_,J){let{widths:Y,kinds:X,breakableWidths:R,breakablePrefixWidths:Z}=O;if(Y.length===0)return 0;let Q=h(),f=Q.lineFitEpsilon,V=0,$=0,u=!1,q=0,D=0,b=0,K=0,j=-1,B=0;function k(){j=-1,B=0}function y(H=b,z=K,W=$){V++,J?.({startSegmentIndex:q,startGraphemeIndex:D,endSegmentIndex:H,endGraphemeIndex:z,width:W}),$=0,u=!1,k()}function A(H,z){u=!0,q=H,D=0,b=H+1,K=0,$=z}function T(H,z,W){u=!0,q=H,D=z,b=H,K=z+1,$=W}function L(H,z){if(!u){A(H,z);return}$+=z,b=H+1,K=0}function C(H,z){if(!m(X[H]))return;j=H+1,B=$-z}function F(H){P(H,0)}function P(H,z){let W=R[H],c=Z[H]??null;for(let I=z;I<W.length;I++){let o=t(W,c,I,Q.preferPrefixWidthsForBreakableRuns);if(!u){T(H,I,o);continue}if($+o>_+f)y(),T(H,I,o);else $+=o,b=H,K=I+1}if(u&&b===H&&K===W.length)b=H+1,K=0}let E=0;while(E<Y.length){let H=Y[E],z=X[E];if(!u){if(H>_&&R[E]!==null)F(E);else A(E,H);C(E,H),E++;continue}if($+H>_+f){if(m(z)){L(E,H),y(E+1,0,$-H),E++;continue}if(j>=0){y(j,0,B);continue}if(H>_&&R[E]!==null){y(),F(E),E++;continue}y();continue}L(E,H),C(E,H),E++}if(u)y();return V}function J0(O,_,J){if(O.simpleLineWalkFastPath)return cO(O,_,J);let{widths:Y,lineEndFitAdvances:X,lineEndPaintAdvances:R,kinds:Z,breakableWidths:Q,breakablePrefixWidths:f,discretionaryHyphenWidth:V,tabStopAdvance:$,chunks:u}=O;if(Y.length===0||u.length===0)return 0;let q=h(),D=q.lineFitEpsilon,b=0,K=0,j=!1,B=0,k=0,y=0,A=0,T=-1,L=0,C=0,F=null;function P(){T=-1,L=0,C=0,F=null}function E(N=y,M=A,v=K){b++,J?.({startSegmentIndex:B,startGraphemeIndex:k,endSegmentIndex:N,endGraphemeIndex:M,width:v}),K=0,j=!1,P()}function H(N,M){j=!0,B=N,k=0,y=N+1,A=0,K=M}function z(N,M,v){j=!0,B=N,k=M,y=N,A=M+1,K=v}function W(N,M){if(!j){H(N,M);return}K+=M,y=N+1,A=0}function c(N,M){if(!m(Z[N]))return;let v=Z[N]==="tab"?0:X[N],w=Z[N]==="tab"?M:R[N];T=N+1,L=K-M+v,C=K-M+w,F=Z[N]}function I(N){o(N,0)}function o(N,M){let v=Q[N],w=f[N]??null;for(let G=M;G<v.length;G++){let l=t(v,w,G,q.preferPrefixWidthsForBreakableRuns);if(!j){z(N,G,l);continue}if(K+l>_+D)E(),z(N,G,l);else K+=l,y=N,A=G+1}if(j&&y===N&&A===v.length)y=N+1,A=0}function S(N){if(F!=="soft-hyphen")return!1;let M=Q[N];if(M===null)return!1;let v=q.preferPrefixWidthsForBreakableRuns?f[N]??M:M,w=v!==M,{fitCount:G,fittedWidth:l}=y0(v,K,_,D,V,w);if(G===0)return!1;if(K=l,y=N,A=G,P(),G===M.length)return y=N+1,A=0,!0;return E(N,G,l+V),o(N,G),!0}function U(N){b++,J?.({startSegmentIndex:N.startSegmentIndex,startGraphemeIndex:0,endSegmentIndex:N.consumedEndSegmentIndex,endGraphemeIndex:0,width:0}),P()}for(let N=0;N<u.length;N++){let M=u[N];if(M.startSegmentIndex===M.endSegmentIndex){U(M);continue}j=!1,K=0,B=M.startSegmentIndex,k=0,y=M.startSegmentIndex,A=0,P();let v=M.startSegmentIndex;while(v<M.endSegmentIndex){let w=Z[v],G=w==="tab"?w0(K,$):Y[v];if(w==="soft-hyphen"){if(j)y=v+1,A=0,T=v+1,L=K+V,C=K+V,F=w;v++;continue}if(!j){if(G>_&&Q[v]!==null)I(v);else H(v,G);c(v,G),v++;continue}if(K+G>_+D){let n=K+(w==="tab"?0:X[v]),e=K+(w==="tab"?G:R[v]);if(F==="soft-hyphen"&&q.preferEarlySoftHyphenBreak&&L<=_+D){E(T,0,C);continue}if(F==="soft-hyphen"&&S(v)){v++;continue}if(m(w)&&n<=_+D){W(v,G),E(v+1,0,e),v++;continue}if(T>=0&&L<=_+D){E(T,0,C);continue}if(G>_&&Q[v]!==null){E(),I(v),v++;continue}E();continue}W(v,G),c(v,G),v++}if(j){let w=T===M.consumedEndSegmentIndex?C:K;E(M.consumedEndSegmentIndex,0,w)}}return b}function S0(O,_,J){let Y=kO(O,_);if(Y===null)return null;if(O.simpleLineWalkFastPath)return oO(O,Y,J);let X=L0(O,Y.segmentIndex);if(X<0)return null;let R=O.chunks[X];if(R.startSegmentIndex===R.endSegmentIndex)return{startSegmentIndex:R.startSegmentIndex,startGraphemeIndex:0,endSegmentIndex:R.consumedEndSegmentIndex,endGraphemeIndex:0,width:0};let{widths:Z,lineEndFitAdvances:Q,lineEndPaintAdvances:f,kinds:V,breakableWidths:$,breakablePrefixWidths:u,discretionaryHyphenWidth:q,tabStopAdvance:D}=O,b=h(),K=b.lineFitEpsilon,j=0,B=!1,k=Y.segmentIndex,y=Y.graphemeIndex,A=k,T=y,L=-1,C=0,F=0,P=null;function E(){L=-1,C=0,F=0,P=null}function H(U=A,N=T,M=j){if(!B)return null;return{startSegmentIndex:k,startGraphemeIndex:y,endSegmentIndex:U,endGraphemeIndex:N,width:M}}function z(U,N){B=!0,A=U+1,T=0,j=N}function W(U,N,M){B=!0,A=U,T=N+1,j=M}function c(U,N){if(!B){z(U,N);return}j+=N,A=U+1,T=0}function I(U,N){if(!m(V[U]))return;let M=V[U]==="tab"?0:Q[U],v=V[U]==="tab"?N:f[U];L=U+1,C=j-N+M,F=j-N+v,P=V[U]}function o(U,N){let M=$[U],v=u[U]??null;for(let w=N;w<M.length;w++){let G=t(M,v,w,b.preferPrefixWidthsForBreakableRuns);if(!B){W(U,w,G);continue}if(j+G>J+K)return H();j+=G,A=U,T=w+1}if(B&&A===U&&T===M.length)A=U+1,T=0;return null}function S(U){if(P!=="soft-hyphen"||L<0)return null;let N=$[U]??null;if(N!==null){let M=b.preferPrefixWidthsForBreakableRuns?u[U]??N:N,v=M!==N,{fitCount:w,fittedWidth:G}=y0(M,j,J,K,q,v);if(w===N.length)return j=G,A=U+1,T=0,E(),null;if(w>0)return H(U,w,G+q)}if(C<=J+K)return H(L,0,F);return null}for(let U=Y.segmentIndex;U<R.endSegmentIndex;U++){let N=V[U],M=U===Y.segmentIndex?Y.graphemeIndex:0,v=N==="tab"?w0(j,D):Z[U];if(N==="soft-hyphen"&&M===0){if(B)A=U+1,T=0,L=U+1,C=j+q,F=j+q,P=N;continue}if(!B){if(M>0){let G=o(U,M);if(G!==null)return G}else if(v>J&&$[U]!==null){let G=o(U,0);if(G!==null)return G}else z(U,v);I(U,v);continue}if(j+v>J+K){let G=j+(N==="tab"?0:Q[U]),l=j+(N==="tab"?v:f[U]);if(P==="soft-hyphen"&&b.preferEarlySoftHyphenBreak&&C<=J+K)return H(L,0,F);let n=S(U);if(n!==null)return n;if(m(N)&&G<=J+K)return c(U,v),H(U+1,0,l);if(L>=0&&C<=J+K)return H(L,0,F);if(v>J&&$[U]!==null){let e=H();if(e!==null)return e;let v0=o(U,0);if(v0!==null)return v0}return H()}c(U,v),I(U,v)}if(L===R.consumedEndSegmentIndex&&T===0)return H(R.consumedEndSegmentIndex,0,F);return H(R.consumedEndSegmentIndex,0,j)}function oO(O,_,J){let{widths:Y,kinds:X,breakableWidths:R,breakablePrefixWidths:Z}=O,Q=h(),f=Q.lineFitEpsilon,V=0,$=!1,u=_.segmentIndex,q=_.graphemeIndex,D=u,b=q,K=-1,j=0;function B(C=D,F=b,P=V){if(!$)return null;return{startSegmentIndex:u,startGraphemeIndex:q,endSegmentIndex:C,endGraphemeIndex:F,width:P}}function k(C,F){$=!0,D=C+1,b=0,V=F}function y(C,F,P){$=!0,D=C,b=F+1,V=P}function A(C,F){if(!$){k(C,F);return}V+=F,D=C+1,b=0}function T(C,F){if(!m(X[C]))return;K=C+1,j=V-F}function L(C,F){let P=R[C],E=Z[C]??null;for(let H=F;H<P.length;H++){let z=t(P,E,H,Q.preferPrefixWidthsForBreakableRuns);if(!$){y(C,H,z);continue}if(V+z>J+f)return B();V+=z,D=C,b=H+1}if($&&D===C&&b===P.length)D=C+1,b=0;return null}for(let C=_.segmentIndex;C<Y.length;C++){let F=Y[C],P=X[C],E=C===_.segmentIndex?_.graphemeIndex:0;if(!$){if(E>0){let z=L(C,E);if(z!==null)return z}else if(F>J&&R[C]!==null){let z=L(C,0);if(z!==null)return z}else k(C,F);T(C,F);continue}if(V+F>J+f){if(m(P))return A(C,F),B(C+1,0,V-F);if(K>=0)return B(K,0,j);if(F>J&&R[C]!==null){let z=B();if(z!==null)return z;let W=L(C,0);if(W!==null)return W}return B()}A(C,F),T(C,F)}return B()}var R0=null,C0=new WeakMap;function I0(){if(R0===null)R0=new Intl.Segmenter(void 0,{granularity:"grapheme"});return R0}function lO(O){if(O)return{widths:[],lineEndFitAdvances:[],lineEndPaintAdvances:[],kinds:[],simpleLineWalkFastPath:!0,segLevels:null,breakableWidths:[],breakablePrefixWidths:[],discretionaryHyphenWidth:0,tabStopAdvance:0,chunks:[],segments:[]};return{widths:[],lineEndFitAdvances:[],lineEndPaintAdvances:[],kinds:[],simpleLineWalkFastPath:!0,segLevels:null,breakableWidths:[],breakablePrefixWidths:[],discretionaryHyphenWidth:0,tabStopAdvance:0,chunks:[]}}function c0(O,_,J){let Y=I0(),X=h(),{cache:R,emojiCorrection:Z}=B0(_,G0(O.normalized)),Q=g("-",x("-",R),Z),V=g(" ",x(" ",R),Z)*8;if(O.len===0)return lO(J);let $=[],u=[],q=[],D=[],b=O.chunks.length<=1,K=J?[]:null,j=[],B=[],k=J?[]:null,y=Array.from({length:O.len}),A=Array.from({length:O.len});function T(F,P,E,H,z,W,c,I){if(z!=="text"&&z!=="space"&&z!=="zero-width-break")b=!1;if($.push(P),u.push(E),q.push(H),D.push(z),K?.push(W),j.push(c),B.push(I),k!==null)k.push(F)}for(let F=0;F<O.len;F++){y[F]=$.length;let P=O.texts[F],E=O.isWordLike[F],H=O.kinds[F],z=O.starts[F];if(H==="soft-hyphen"){T(P,0,Q,Q,H,z,null,null),A[F]=$.length;continue}if(H==="hard-break"){T(P,0,0,0,H,z,null,null),A[F]=$.length;continue}if(H==="tab"){T(P,0,0,0,H,z,null,null),A[F]=$.length;continue}let W=x(P,R);if(H==="text"&&W.containsCJK){let S="",U=0;for(let N of Y.segment(P)){let M=N.segment;if(S.length===0){S=M,U=N.index;continue}if(i.has(S)||$0.has(M)||r.has(M)||X.carryCJKAfterClosingQuote&&p(M)&&D0(S)){S+=M;continue}let v=x(S,R),w=g(S,v,Z);T(S,w,w,w,"text",z+U,null,null),S=M,U=N.index}if(S.length>0){let N=x(S,R),M=g(S,N,Z);T(S,M,M,M,"text",z+U,null,null)}A[F]=$.length;continue}let c=g(P,W,Z),I=H==="space"||H==="preserved-space"||H==="zero-width-break"?0:c,o=H==="space"||H==="zero-width-break"?0:c;if(E&&P.length>1){let S=P0(P,W,R,Z),U=X.preferPrefixWidthsForBreakableRuns?A0(P,W,R,Z):null;T(P,c,I,o,H,z,S,U)}else T(P,c,I,o,H,z,null,null);A[F]=$.length}let L=hO(O.chunks,y,A),C=K===null?null:u0(O.normalized,K);if(k!==null)return{widths:$,lineEndFitAdvances:u,lineEndPaintAdvances:q,kinds:D,simpleLineWalkFastPath:b,segLevels:C,breakableWidths:j,breakablePrefixWidths:B,discretionaryHyphenWidth:Q,tabStopAdvance:V,chunks:L,segments:k};return{widths:$,lineEndFitAdvances:u,lineEndPaintAdvances:q,kinds:D,simpleLineWalkFastPath:b,segLevels:C,breakableWidths:j,breakablePrefixWidths:B,discretionaryHyphenWidth:Q,tabStopAdvance:V,chunks:L}}function hO(O,_,J){let Y=[];for(let X=0;X<O.length;X++){let R=O[X],Z=R.startSegmentIndex<_.length?_[R.startSegmentIndex]:J[J.length-1]??0,Q=R.endSegmentIndex<_.length?_[R.endSegmentIndex]:J[J.length-1]??0,f=R.consumedEndSegmentIndex<_.length?_[R.consumedEndSegmentIndex]:J[J.length-1]??0;Y.push({startSegmentIndex:Z,endSegmentIndex:Q,consumedEndSegmentIndex:f})}return Y}function o0(O,_,J,Y){let X=N0(O,h(),Y?.whiteSpace);return c0(X,_,J)}function V1(O,_,J){let Y=performance.now(),X=N0(O,h(),J?.whiteSpace),R=performance.now(),Z=c0(X,_,!1),Q=performance.now(),f=0;for(let V of Z.breakableWidths)if(V!==null)f++;return{analysisMs:R-Y,measureMs:Q-R,totalMs:Q-Y,analysisSegments:X.len,preparedSegments:Z.widths.length,breakableSegments:f}}function X1(O,_,J){return o0(O,_,!1,J)}function Y1(O,_,J){return o0(O,_,!0,J)}function F0(O){return O}function Z1(O,_,J){let Y=W0(F0(O),_);return{lineCount:Y,height:Y*J}}function k0(O,_,J){let Y=J.get(O);if(Y!==void 0)return Y;Y=[];let X=I0();for(let R of X.segment(_[O]))Y.push(R.segment);return J.set(O,Y),Y}function l0(O){let _=C0.get(O);if(_!==void 0)return _;return _=new Map,C0.set(O,_),_}function pO(O,_,J,Y){return Y>0&&O[Y-1]==="soft-hyphen"&&!(_===Y&&J>0)}function xO(O,_,J,Y,X,R,Z){let Q="",f=pO(_,Y,X,R);for(let V=Y;V<R;V++){if(_[V]==="soft-hyphen"||_[V]==="hard-break")continue;if(V===Y&&X>0)Q+=k0(V,O,J).slice(X).join("");else Q+=O[V]}if(Z>0){if(f)Q+="-";Q+=k0(R,O,J).slice(Y===R?X:0,Z).join("")}else if(f)Q+="-";return Q}function h0(O,_,J,Y,X,R,Z){return{text:xO(O.segments,O.kinds,_,Y,X,R,Z),width:J,start:{segmentIndex:Y,graphemeIndex:X},end:{segmentIndex:R,graphemeIndex:Z}}}function gO(O,_,J){return h0(O,_,J.width,J.startSegmentIndex,J.startGraphemeIndex,J.endSegmentIndex,J.endGraphemeIndex)}function p0(O){return{width:O.width,start:{segmentIndex:O.startSegmentIndex,graphemeIndex:O.startGraphemeIndex},end:{segmentIndex:O.endSegmentIndex,graphemeIndex:O.endGraphemeIndex}}}function mO(O,_,J){let Y=S0(O,_,J);if(Y===null)return null;return p0(Y)}function rO(O,_){return h0(O,l0(O),_.width,_.start.segmentIndex,_.start.graphemeIndex,_.end.segmentIndex,_.end.graphemeIndex)}function $1(O,_,J){if(O.widths.length===0)return 0;return J0(F0(O),_,(Y)=>{J(p0(Y))})}function Q1(O,_,J){let Y=mO(O,_,J);if(Y===null)return null;return rO(O,Y)}function q1(O,_,J){let Y=[];if(O.widths.length===0)return{lineCount:0,height:0,lines:Y};let X=l0(O),R=J0(F0(O),_,(Z)=>{Y.push(gO(O,X,Z))});return{lineCount:R,height:R*J,lines:Y}}function aO(){z0(),R0=null,C0=new WeakMap,T0()}function D1(O){j0(O),aO()}
+const prepare=X1,layout=Z1,prepareWithSegments=Y1,walkLineRanges=$1;
 
-    <section class="results" aria-label="Selected results">
-      <dl class="results__list">
-        <div><dt class="results__num">~8 hrs</dt><dd>of weekly board and lender report prep automated with Python, Excel, and Claude</dd></div>
-        <div><dt class="results__num">~5 hrs</dt><dd>of weekly pipeline reporting replaced by a live Sigma dashboard on Snowflake</dd></div>
-        <div><dt class="results__num">3</dt><dd>M&amp;A targets modeled, including a tuck-in acquisition</dd></div>
-        <div><dt class="results__num">$250K</dt><dd>venture investment secured for a biotech startup through Tulane Ventures</dd></div>
-      </dl>
-    </section>
 
-    <section class="section about" id="about">
-      <img class="about__photo" src="assets/img/headshot.jpg" width="200" height="200" alt="James Laprocido smiling in a collared shirt and red tie">
-      <div class="about__text">
-        <h2 class="h2">Where this is going</h2>
-        <p>My goal is to learn and grow as much as I can. I think the future of finance belongs to people who can find the actionable data in the financials and also build the systems that act on it.</p>
-        <p>I already do both halves at Lightspeed Systems, where I own the forecast and the P&amp;L and have automated the board, lender, and pipeline reporting around them. My own projects push the same idea further, each one asking a different question:</p>
-        <ul class="thread">
-          <li class="thread__item"><a href="#research">Equity research</a><span>How do I become a better analyst?</span></li>
-          <li class="thread__item"><a href="#gtm">Go-to-market case study</a><span>How do I work out how to steer a business, and find the data to do it?</span></li>
-          <li class="thread__item"><a href="#trading">Trading algorithm</a><span>How do I combine my financial experience with technical ability, at scale?</span></li>
-        </ul>
-        <p class="about__scope">These projects are my own work, done outside my role at Lightspeed.</p>
-      </div>
-    </section>
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    <section class="section project" id="research">
-      <div class="project__head">
-        <h2 class="h2">Equity research</h2>
-        <p class="project__question">How do I become a better analyst?</p>
-        <p class="project__kicker">The practice: three reports across a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
-      </div>
-      <div class="project__body project__body--stack">
-        <ul class="reports">
-          <li class="report">
-            <a class="report__thumb" href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/alphabet-googl.jpg" width="240" height="180" loading="lazy" alt=""></a>
-            <div class="report__main">
-              <h3 class="h3"><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener">Alphabet Inc. (GOOGL), April 2025</a></h3>
-              <p>Search growth, AI leadership, and a rising Cloud segment support the rating. 9 pages.</p>
-            </div>
-            <p class="report__verdict"><span class="report__big">Buy</span>$186 target, 13.8% upside</p>
-          </li>
-          <li class="report">
-            <a class="report__thumb" href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/crowdstrike-lbo.jpg" width="240" height="180" loading="lazy" alt=""></a>
-            <div class="report__main">
-              <h3 class="h3"><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener">CrowdStrike (CRWD) LBO analysis, December 2024</a></h3>
-              <p>A buyout case for a high-growth cybersecurity leader after the July 2024 outage. 10 pages.</p>
-            </div>
-            <p class="report__verdict"><span class="report__big">$449.69</span>implied per share, 23% above market</p>
-          </li>
-          <li class="report">
-            <a class="report__thumb" href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/newpark-nr.jpg" width="240" height="180" loading="lazy" alt=""></a>
-            <div class="report__main">
-              <h3 class="h3"><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener">Newpark Resources (NR), November 2024</a></h3>
-              <p>A Burkenroad Report on the exit from fluids and the refocus on Industrial Solutions. 32 pages.</p>
-            </div>
-            <p class="report__verdict"><span class="report__big">Outperform</span>$10 target</p>
-          </li>
-        </ul>
-        <p class="prose-note">Educational work, not investment advice.</p>
-      </div>
-    </section>
+/* ---------- Views ---------- */
+const tabs = [...document.querySelectorAll('[role=tab]')];
+const views = [...document.querySelectorAll('[role=tabpanel]')];
+const viewIds = views.map(v => v.id);
+const SUB = { research: 'projects', gtm: 'projects', trading: 'projects' };
 
-    <section class="section project" id="gtm">
-      <div class="project__head">
-        <h2 class="h2">Go-to-market case study</h2>
-        <p class="project__question">How do I work out how to steer a business, and find the data to do it?</p>
-        <p class="project__kicker">The practice: a full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
-      </div>
-      <div class="project__body project__body--stack">
-        <ol class="stages">
-          <li class="stages__item"><h3 class="h3">Learn</h3><p>Start from existing customers and segments to see who buys and why.</p></li>
-          <li class="stages__item"><h3 class="h3">Define</h3><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
-          <li class="stages__item"><h3 class="h3">Prove</h3><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
-          <li class="stages__item"><h3 class="h3">Compound</h3><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
-        </ol>
-        <p class="prose-note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
-        <div class="actions actions--left">
-          <a class="btn btn--solid" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a>
-        </div>
-      </div>
-    </section>
+function show(raw, push) {
+  const id = SUB[raw] || (viewIds.includes(raw) ? raw : 'home');
+  tabs.forEach((t, i) => {
+    const on = t.getAttribute('aria-controls') === id;
+    t.setAttribute('aria-selected', on);
+    t.tabIndex = on || (id === 'home' && i === 0) ? 0 : -1;
+  });
+  views.forEach(v => { v.hidden = v.id !== id; });
+  document.body.classList.toggle('is-home', id === 'home');
+  document.title = id === 'home' ? 'James Laprocido | Finance and Analytics'
+    : tabs.find(t => t.getAttribute('aria-controls') === id).textContent + ' | James Laprocido';
+  if (push) history.replaceState(null, '', id === 'home' ? location.pathname : '#' + raw);
+  if (SUB[raw]) requestAnimationFrame(() => document.getElementById(raw).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }));
+  else scrollTo(0, 0);
+  dispatchEvent(new Event('viewchange'));
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => show(t.getAttribute('aria-controls'), true));
+  t.addEventListener('keydown', e => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!d) return;
+    const n = tabs[(i + d + tabs.length) % tabs.length];
+    n.focus(); n.click(); e.preventDefault();
+  });
+});
+document.querySelectorAll('[data-goto]').forEach(a =>
+  a.addEventListener('click', e => { e.preventDefault(); show(a.dataset.goto, true); }));
+addEventListener('hashchange', () => show(location.hash.slice(1)));
+show(location.hash.slice(1));
 
-    <section class="section project" id="trading">
-      <div class="project__head">
-        <h2 class="h2">Trading algorithm</h2>
-        <p class="project__question">How do I combine my financial experience with technical ability, at scale?</p>
-        <p class="project__kicker">The practice: an automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day.</p>
-      </div>
-      <div class="project__body">
-        <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
-          <div class="live__head">
-            <span class="live__status" id="live-status">Latest snapshot</span>
-            <span class="live__time" id="live-time">Updated Oct 16, 2026</span>
-          </div>
-          <dl class="live__grid">
-            <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
-            <div><dt>Total return</dt><dd data-key="Total PnL">&minus;0.43%</dd></div>
-            <div><dt>Drawdown</dt><dd data-key="Drawdown from Peak">4.43%</dd></div>
-            <div><dt>Sharpe ratio</dt><dd data-key="Sharpe Ratio">&minus;0.43</dd></div>
-          </dl>
-          <p class="live__foot">Paper trading since September 11, 2026. Not investment advice.</p>
-        </div>
+/* ---------- Endless photo carousel ---------- */
+document.querySelectorAll('[data-carousel]').forEach(c => {
+  const track = c.querySelector('.car__track');
+  const n = track.children.length;
+  const count = c.querySelector('.car__count'), toggle = c.querySelector('.car__play');
+  const DELAY = 4500, DUR = 550, GAP = 14, EASE = 'cubic-bezier(.3,.7,.2,1)';
+  let cur = 0, busy = false, timer = null, playing = !reduce, hovering = false;
 
-        <div class="prose">
-          <p>The live strategy is a two-moving-average crossover on AAPL at 2x leverage. Five research strategies, including Donchian breakout and Bollinger mean reversion, are tested with Monte Carlo permutation tests before they get near the live book.</p>
-          <ul class="plain">
-            <li>Risk controls: a max-drawdown kill switch, a daily loss limit, and an hourly intraday circuit breaker. The loss limit has already fired once, which is what it is there for.</li>
-            <li>GitHub Actions runs the daily rebalance, intraday checks, and end-of-day summary.</li>
-            <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
-          </ul>
-          <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
-          <div class="actions actions--left">
-            <a class="btn btn--solid" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a>
-            <a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  const step = () => track.children[0].offsetWidth + GAP;
+  const upd = () => { count.textContent = (cur + 1) + ' / ' + n; };
+  function next() {
+    if (busy) return;
+    busy = true;
+    if (reduce) { track.append(track.children[0]); cur = (cur + 1) % n; upd(); busy = false; return; }
+    track.style.transition = `transform ${DUR}ms ${EASE}`;
+    track.style.transform = `translateX(-${step()}px)`;
+    setTimeout(() => {
+      track.style.transition = 'none'; track.style.transform = 'none';
+      track.append(track.children[0]);
+      cur = (cur + 1) % n; upd(); busy = false;
+    }, DUR + 30);
+  }
+  function prev() {
+    if (busy) return;
+    busy = true;
+    track.style.transition = 'none';
+    track.prepend(track.children[n - 1]);
+    cur = (cur - 1 + n) % n; upd();
+    if (reduce) { busy = false; return; }
+    track.style.transform = `translateX(-${step()}px)`;
+    void track.offsetWidth;
+    track.style.transition = `transform ${DUR}ms ${EASE}`;
+    track.style.transform = 'none';
+    setTimeout(() => { busy = false; }, DUR + 30);
+  }
+  const stop = () => { clearInterval(timer); timer = null; };
+  function start() {
+    stop();
+    if (!playing || hovering || document.hidden) return;
+    timer = setInterval(() => { if (track.offsetParent !== null) next(); }, DELAY);
+  }
+  function setPlaying(on) {
+    playing = on;
+    toggle.setAttribute('aria-label', on ? 'Pause photo slideshow' : 'Play photo slideshow');
+    toggle.textContent = on ? '❚❚' : '▶';
+    start();
+  }
+  c.querySelector('.car__prev').onclick = () => { prev(); start(); };
+  c.querySelector('.car__next').onclick = () => { next(); start(); };
+  toggle.onclick = () => setPlaying(!playing);
+  c.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { next(); start(); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { prev(); start(); e.preventDefault(); }
+  });
+  let x0 = null;
+  track.addEventListener('pointerdown', e => { x0 = e.clientX; });
+  addEventListener('pointerup', e => {
+    if (x0 === null) return;
+    const dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); start(); }
+  });
+  ['mouseenter', 'focusin'].forEach(ev => c.addEventListener(ev, () => { hovering = true; stop(); }));
+  ['mouseleave', 'focusout'].forEach(ev => c.addEventListener(ev, () => { hovering = false; start(); }));
+  c.addEventListener('touchstart', () => { hovering = true; stop(); }, { passive: true });
+  c.addEventListener('touchend', () => setTimeout(() => { hovering = false; start(); }, 6000), { passive: true });
+  document.addEventListener('visibilitychange', start);
+  setPlaying(playing);
+  upd();
+});
 
-    <section class="section project" id="resume">
-      <div class="project__head">
-        <h2 class="h2">Resume</h2>
-        <p class="project__kicker">Based in Austin, Texas. Before finance I played linebacker at Tulane, where we won the conference title and the Cotton Bowl.</p>
-      </div>
-      <div class="project__body project__body--stack">
-        <ol class="jobs">
-          <li class="job job--current"><div><h3 class="h3">Financial Analyst</h3><p>Lightspeed Systems <span class="tag">Current role</span></p></div><p class="job__dates">June 2025 to present</p></li>
-          <li class="job"><div><h3 class="h3">Private Equity Intern Analyst</h3><p>El Toro Capital</p></div><p class="job__dates">December 2024 to May 2025</p></li>
-          <li class="job"><div><h3 class="h3">Venture Capital Analyst</h3><p>Tulane Ventures Fund</p></div><p class="job__dates">August 2024 to December 2024</p></li>
-          <li class="job"><div><h3 class="h3">Investment Analyst</h3><p>National Western Life</p></div><p class="job__dates">May 2024 to August 2024</p></li>
-          <li class="job"><div><h3 class="h3">Outside Linebacker</h3><p>Tulane University Football</p></div><p class="job__dates">August 2022 to February 2024</p></li>
-          <li class="job"><div><h3 class="h3">B.S. in Management, Finance</h3><p>Tulane University</p></div><p class="job__dates">August 2022 to May 2025</p></li>
-        </ol>
-        <div class="actions actions--left">
-          <a class="btn btn--solid" href="assets/resume.pdf" download>Download resume (PDF)</a>
-          <a class="btn btn--line" href="assets/resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
-        </div>
-        <details class="preview" id="preview">
-          <summary>Preview the PDF here</summary>
-          <object class="preview__pdf" type="application/pdf" aria-label="Resume PDF preview"><p>Your browser cannot show the PDF. <a href="assets/resume.pdf">Download it instead.</a></p></object>
-        </details>
-      </div>
-    </section>
+/* ---------- Resume accordion (state) ---------- */
+const xps = [...document.querySelectorAll('.xp')];
+const panelH = new Map();           /* filled by Pretext below */
+function setOpen(xp, open) {
+  xp.classList.toggle('is-open', open);
+  xp.querySelector('.xp__btn').setAttribute('aria-expanded', String(open));
+  const p = xp.querySelector('.xp__panel');
+  if (document.documentElement.classList.contains('js-pretext')) p.style.height = open ? (panelH.get(xp) || p.scrollHeight) + 'px' : '0px';
+}
+xps.forEach(xp => xp.querySelector('.xp__btn').addEventListener('click', () => setOpen(xp, !xp.classList.contains('is-open'))));
+const all = document.getElementById('xp-all');
+all.addEventListener('click', () => {
+  const open = all.dataset.open !== 'true';
+  xps.forEach(xp => setOpen(xp, open));
+  all.dataset.open = String(open);
+  all.textContent = open ? 'Collapse all' : 'Expand all';
+});
 
-    <section class="contact" id="contact">
-      <div class="contact__inner">
-        <h2 class="contact__title">Let's talk</h2>
-        <p class="contact__lede">I'm open to conversations about general finance, automation, investments, and analytics roles.</p>
-        <p class="contact__email">
-          <a href="mailto:jmjlaprocido@gmail.com">jmjlaprocido@gmail.com</a>
-          <button class="copy" type="button" id="copy" data-email="jmjlaprocido@gmail.com">Copy email</button>
-          <span class="copy__msg" id="copy-msg" role="status"></span>
-        </p>
-        <p class="contact__links">
-          <a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/jlaprocido" target="_blank" rel="noopener">GitHub</a>
-          <a href="assets/resume.pdf" download>Resume</a>
-        </p>
-      </div>
-    </section>
-  </main>
+/* ---------- Pretext: computed text layout ---------- */
+await document.fonts.ready;
 
-  <footer class="footer">
-    <p>&copy; <span id="yr">2026</span> James Laprocido. Last updated October 2026.</p>
-    <a href="#top">Back to top</a>
-  </footer>
+/* 1. Fit the hero name to its column: widest line measured, not guessed. */
+const nameEl = document.getElementById('name');
+function fitName() {
+  if (nameEl.offsetParent === null) return;
+  const col = nameEl.parentElement.clientWidth;
+  const fam = getComputedStyle(nameEl).fontFamily;
+  const lines = [...nameEl.children].map(s => s.textContent.toUpperCase());
+  let widest = 0;
+  for (const t of lines) {
+    const segs = prepareWithSegments(t, `700 100px ${fam}`);
+    walkLineRanges(segs, 1e6, l => { widest = Math.max(widest, l.width - 3 * t.length); }); /* -0.03em tracking */
+  }
+  const MAX = 80, MIN = 38;
+  const px = Math.max(MIN, Math.min(MAX, Math.floor(col / widest * 100)));
+  nameEl.style.fontSize = px + 'px';
+}
 
-  <script src="js/main.js"></script>
+/* 2. Exact accordion panel heights from line counts, no DOM measuring of the text. */
+function measurePanels() {
+  document.documentElement.classList.add('js-pretext');
+  xps.forEach(xp => {
+    const inner = xp.querySelector('.xp__inner');
+    const lis = [...inner.querySelectorAll('.xp__list li')];
+    const cs = getComputedStyle(lis[0]);
+    const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.65;
+    let h = 0;
+    for (const li of lis) {
+      const w = li.clientWidth;
+      if (!w) return;
+      h += layout(prepare(li.textContent, getComputedStyle(li).font), w, lh).height + 8;
+    }
+    const loc = inner.querySelector('.xp__loc'), tags = inner.querySelector('.xp__tags');
+    h += 14;                                     /* list bottom margin */
+    if (loc) h += loc.offsetHeight + 10;
+    if (tags) h += tags.offsetHeight;
+    h += 26;                                     /* inner bottom padding */
+    h = Math.max(h, xp.querySelector('.xp__panel').scrollHeight);       /* guard: never clip if the font rounds differently than the model */
+    panelH.set(xp, Math.ceil(h));
+    const p = xp.querySelector('.xp__panel');
+    p.style.height = xp.classList.contains('is-open') ? Math.ceil(h) + 'px' : '0px';
+  });
+}
+function relayout() { fitName(); measurePanels(); }
+new ResizeObserver(relayout).observe(document.body);
+addEventListener('viewchange', relayout);
+relayout();
+setOpen(xps[0], true);
+
+/* ---------- Copy email ---------- */
+const copy = document.getElementById('copy'), msg = document.getElementById('copy-msg');
+copy.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(copy.dataset.email); msg.textContent = 'Copied'; }
+  catch { msg.textContent = 'Select and copy: ' + copy.dataset.email; }
+  setTimeout(() => { msg.textContent = ''; }, 2500);
+});
+
+/* ---------- Live bot numbers: read the published dashboard, keep the snapshot on failure ---------- */
+(async () => {
+  const box = document.getElementById('live');
+  try {
+    const res = await fetch(box.dataset.source, { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+    const stats = {};
+    doc.querySelectorAll('.stat').forEach(s => { stats[s.querySelector('.label').textContent.trim()] = s.querySelector('.value').textContent.trim(); });
+    const updated = (doc.querySelector('.updated')?.textContent || '').replace('Last updated:', '').trim();
+    let filled = 0;
+    box.querySelectorAll('[data-key]').forEach(el => { const v = stats[el.dataset.key]; if (v) { el.textContent = v.replace('-', '−'); filled++; } });
+    if (!filled) throw new Error('no stats');
+    box.classList.add('live--on');
+    document.getElementById('live-status').textContent = 'Live from the dashboard';
+    if (updated) {
+      const t = new Date(updated.replace(' UTC', 'Z').replace(' ', 'T'));
+      document.getElementById('live-time').textContent = 'Updated ' + (isNaN(t) ? updated
+        : t.toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }));
+    }
+  } catch { /* keep the snapshot already in the page */ }
+})();
+
+</script>
 </body>
 </html>
