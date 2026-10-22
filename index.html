@@ -19,9 +19,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap">
 <style>
-:root{--ink:#14233a;--paper:#f5f7fa;--panel:#fff;--rule:#d3dae4;--muted:#4a566a;--accent:#0a6a56;--soft:#e1f0ec;--btn:#14233a;--btnink:#fff;
+:root{--ink:#0f2e24;--paper:#f2f7fa;--panel:#fff;--rule:#cddbe3;--muted:#4b5e66;--accent:#006747;--soft:#dcecf9;--btn:#006747;--btnink:#fff;--hero:#00432e;--sky:#71c5e8;--blue:#418fde;
 --serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
-@media(prefers-color-scheme:dark){:root{--ink:#e8edf4;--paper:#0f1722;--panel:#172233;--rule:#2a374a;--muted:#a9b4c4;--accent:#4fc9ab;--soft:#14342d;--btn:#e8edf4;--btnink:#0f1722;color-scheme:dark}}
+@media(prefers-color-scheme:dark){:root{--ink:#e4f0ec;--paper:#08170f;--panel:#10261c;--rule:#24402f;--muted:#a1bbb0;--accent:#71c5e8;--soft:#12392b;--btn:#71c5e8;--btnink:#06241a;--hero:#05261b;color-scheme:dark}}
 *{box-sizing:border-box}html{scroll-padding-top:76px}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
 [hidden]{display:none!important}
@@ -33,14 +33,14 @@ a{color:var(--accent);text-underline-offset:3px}a:hover{color:var(--ink)}
 p{margin:0 0 1em;text-wrap:pretty}
 
 /* Header */
-.top{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--rule);z-index:5}
+.top{position:sticky;top:0;background:var(--hero);z-index:5}
 .top__in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0 24px}
-.brand{font:600 1.25rem var(--serif);color:var(--ink);text-decoration:none;padding:14px 0;min-height:48px;display:inline-flex;align-items:center}
+.brand{font:600 1.25rem var(--serif);color:#fff;text-decoration:none;padding:14px 0;min-height:48px;display:inline-flex;align-items:center}
 .tabs{display:flex;gap:4px;overflow-x:auto}
-.tabs button{font:500 .95rem var(--sans);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:15px 14px;cursor:pointer;min-height:48px}
-.tabs button:hover{color:var(--ink)}.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
-.is-home .top{background:transparent;border-bottom-color:transparent}
-main{flex:1;width:100%}
+.tabs button{font:500 .95rem var(--sans);background:none;border:0;border-bottom:3px solid transparent;color:rgba(255,255,255,.84);padding:15px 14px;cursor:pointer;min-height:48px}
+.tabs button:hover{color:#fff}.tabs button[aria-selected=true]{color:#fff;border-bottom-color:var(--sky)}
+.top :focus-visible,.foot :focus-visible{outline-color:var(--sky)}
+main{flex:1;width:100%;border-bottom:6px solid var(--sky)}
 .view{max-width:1040px;margin:0 auto;padding:48px clamp(18px,4vw,48px) 64px}
 .is-home .view{padding:0}
 
@@ -49,21 +49,24 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 .eyebrow{font:600 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
 .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--btn);color:var(--btnink);padding:12px 24px;border-radius:4px;text-decoration:none;font:500 1rem var(--sans);border:1px solid var(--btn);cursor:pointer}
 .btn:hover{color:var(--btnink);opacity:.88}
-.btn--line{background:none;color:var(--ink);border-color:var(--ink)}.btn--line:hover{color:var(--ink);background:var(--soft);opacity:1}
+.btn--line{background:none;color:var(--accent);border-color:var(--accent)}.btn--line:hover{color:var(--ink);background:var(--soft);opacity:1}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 
-/* Home */
-.home{min-height:calc(100vh - 136px);display:flex;align-items:center}
-.home__in{width:100%;max-width:1040px;margin:0 auto;padding:40px clamp(18px,4vw,48px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:center}
+/* Home: full-bleed Tulane hero. The photo sits right and fades into the green. */
+.home{position:relative;overflow:hidden;display:flex;align-items:center;min-height:max(520px,calc(100vh - 136px));background:var(--hero);color:#fff}
+.home__photo{position:absolute;top:0;right:0;bottom:0;width:66%}
+.home__photo img{width:100%;height:100%;object-fit:cover;object-position:46% 38%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 44%);mask-image:linear-gradient(90deg,transparent 0,#000 44%)}
+.home__in{position:relative;z-index:1;width:100%;max-width:1040px;margin:0 auto;padding:56px clamp(18px,4vw,48px)}
+.home__text{max-width:min(540px,50%)}
 .home__name{font:700 clamp(2.4rem,6.4vw,5rem)/.94 var(--serif);letter-spacing:-.03em;text-transform:uppercase;margin:0 0 24px;white-space:nowrap}
 .home__name span{display:block}
 .home__role{font:600 clamp(1.1rem,2vw,1.4rem)/1.35 var(--sans);margin:0 0 6px}
-.home__sub{color:var(--muted);margin:0 0 32px;max-width:44ch}
-.frame{position:relative;margin:0 0 0 auto;width:100%;max-width:400px}
-.frame__img{position:relative}
-.frame__img::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--accent);border-radius:2px}
-.frame img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px}
-.frame figcaption{margin-top:28px;font-size:.88rem;color:var(--muted);text-align:right}
+.home__sub{color:rgba(255,255,255,.86);margin:0 0 28px;max-width:44ch}
+.home__cap{margin:28px 0 0;font-size:.9rem;color:var(--sky)}
+.home .btn{background:#fff;color:var(--hero);border-color:#fff}
+.home .btn--line{background:none;color:#fff;border-color:rgba(255,255,255,.75)}
+.home .btn--line:hover{background:rgba(255,255,255,.14);color:#fff}
+.home :focus-visible{outline-color:var(--sky)}
 
 /* About */
 .about{display:grid;grid-template-columns:340px minmax(0,1fr);gap:56px;align-items:start}
@@ -83,11 +86,16 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 
 /* Carousel */
 .car{margin-top:64px}
-.car__view{overflow:hidden;touch-action:pan-y;margin-top:14px}
-.car__track{list-style:none;margin:0;padding:0;display:flex;gap:14px;will-change:transform}
-.car__slide{flex:0 0 min(46%,420px);height:300px;border-radius:4px;overflow:hidden;background:var(--rule)}
+.car__view{overflow:hidden;touch-action:pan-y;padding:30px 0 40px}
+.car__track{list-style:none;margin:0;padding:0;display:flex;align-items:flex-start;will-change:transform}
+.car__slide{position:relative;margin-right:-56px;border:5px solid var(--panel);border-radius:4px;overflow:hidden;background:var(--rule);box-shadow:0 8px 22px rgba(0,40,26,.22);transform:rotate(var(--r,0deg));transition:transform .25s}
+.car__slide:hover{z-index:2;transform:rotate(var(--r,0deg)) scale(1.03)}
+.car__slide.a{--r:-2.5deg;flex:0 0 min(30%,280px);height:400px}
+.car__slide.a2{--r:2deg;flex:0 0 min(30%,280px);height:350px;margin-top:64px}
+.car__slide.b{--r:-1.2deg;flex:0 0 min(48%,450px);height:300px;margin-top:96px}
+.car__slide.c{--r:2.6deg;flex:0 0 min(38%,360px);height:340px;margin-top:28px}
 .car__slide img{width:100%;height:100%;object-fit:cover}
-.car__bar{display:flex;align-items:center;gap:12px;margin-top:14px}
+.car__bar{display:flex;align-items:center;gap:12px;margin-top:4px}
 .car__count{font:500 .9rem var(--sans);color:var(--muted);min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
 .car__bar button{width:48px;height:48px;border-radius:50%;border:1px solid var(--rule);background:var(--panel);color:var(--ink);font-size:1.1rem;cursor:pointer}
 .car__bar button:hover{border-color:var(--accent);color:var(--accent)}
@@ -124,7 +132,7 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 .pnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;padding:0;list-style:none}
 .pnav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500;background:var(--panel)}
 .pnav a:hover{border-color:var(--accent);color:var(--accent)}
-.proj{padding:8px 0 48px;border-top:1.5px solid var(--ink);margin-top:8px}
+.proj{padding:8px 0 48px;border-top:3px solid var(--accent);margin-top:8px}
 .proj__q{font:italic 500 1.2rem var(--serif);color:var(--accent);margin:.2em 0 .6em}
 .proj__k{color:var(--muted);max-width:68ch}
 .reports{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--rule)}
@@ -160,17 +168,21 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 .links{display:flex;gap:24px;flex-wrap:wrap;margin:0}.links a{display:inline-flex;min-height:44px;align-items:center}
 
 /* Footer */
-.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;padding-bottom:20px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--rule)}
-.social{display:flex;gap:8px;align-items:center}.social a{color:var(--muted);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px}.social a:hover{color:var(--accent)}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;padding-bottom:20px;color:rgba(255,255,255,.8);font-size:.9rem;background:var(--hero);box-shadow:0 0 0 100vmax var(--hero);clip-path:inset(0 -100vmax)}
+.social{display:flex;gap:8px;align-items:center}.social a{color:rgba(255,255,255,.8);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px}.social a:hover{color:#fff}
 .social svg{width:22px;height:22px;fill:currentColor}
 
 @media(max-width:860px){
-  .home{min-height:0}.home__in{grid-template-columns:1fr;gap:40px;padding-top:24px;padding-bottom:48px}
-  .frame{margin:0;max-width:300px}.frame figcaption{text-align:left}
+  .home{min-height:0;flex-direction:column;align-items:stretch}
+  .home__photo{position:relative;width:100%;height:min(66vw,380px)}
+  .home__photo img{object-position:46% 36%;-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent);mask-image:linear-gradient(180deg,#000 62%,transparent)}
+  .home__in{padding-top:0;padding-bottom:44px}.home__text{max-width:none}
   .about{grid-template-columns:1fr;gap:28px}.about__side{position:static;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start}
   .about__side img{aspect-ratio:1/1}.facts{margin:0}
   .thread li{grid-template-columns:1fr;gap:2px}
-  .car__slide{flex-basis:80%;height:240px}
+  .car__slide{margin-right:-36px}
+  .car__slide.a,.car__slide.a2{flex-basis:56%;height:300px}.car__slide.a2{margin-top:40px}
+  .car__slide.b{flex-basis:76%;height:220px;margin-top:70px}.car__slide.c{flex-basis:64%;height:260px;margin-top:22px}
   .xp__btn{grid-template-columns:minmax(0,1fr) 28px;gap:4px 12px}.xp__dates{grid-column:1;grid-row:1}.xp__main{grid-column:1;grid-row:2}
   .xp__chev{grid-column:2;grid-row:1 / span 2;align-self:center;margin-top:0}.is-open .xp__chev{margin-top:6px}
   .xp__inner{padding-left:4px}.rmore{grid-template-columns:1fr}
@@ -179,7 +191,7 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
   .live__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:520px){.about__side{grid-template-columns:1fr}.about__side img{max-width:220px}.view{padding-top:32px}}
-@media(prefers-reduced-motion:reduce){.xp__panel,.xp__chev,.js-pretext .xp__panel{transition:none}}
+@media(prefers-reduced-motion:reduce){.xp__panel,.xp__chev,.js-pretext .xp__panel,.car__slide{transition:none}}
 </style>
 <noscript><style>[hidden]{display:block!important}.xp__panel{grid-template-rows:1fr!important}</style></noscript>
 </head>
@@ -192,13 +204,15 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 <button role="tab" id="t-projects" aria-controls="projects">Projects</button>
 <button role="tab" id="t-contact" aria-controls="contact">Contact</button></div></nav></div></header>
 <main id="main">
-<section id="home" class="home" role="tabpanel" aria-label="Home"><div class="home__in"><div class="home__text">
+<section id="home" class="home" role="tabpanel" aria-label="Home">
+<div class="home__photo"><img src="img/football-hero.jpg" width="1800" height="1200" fetchpriority="high" alt="A Tulane linebacker in a green jersey runs off the field after a game, helmet in hand, across the midfield gator logo"></div>
+<div class="home__in"><div class="home__text">
   <h1 class="home__name" id="name" aria-label="James Laprocido"><span aria-hidden="true">James</span><span aria-hidden="true">Laprocido</span></h1>
   <p class="home__role">Financial Analyst @ Lightspeed Systems</p>
   <p class="home__sub">Turning messy financials into actionable data, repeatably and at scale.</p>
   <div class="actions"><a class="btn" href="#about" data-goto="about">About me</a><a class="btn btn--line" href="#resume" data-goto="resume">Resume</a><a class="btn btn--line" href="#projects" data-goto="projects">Projects</a></div>
-</div>
-<figure class="frame"><div class="frame__img"><img src="assets/img/headshot.jpg" width="400" height="500" alt="James Laprocido smiling in a collared shirt and red tie"></div><figcaption>B.S. Management, Finance @ Tulane &middot; CFA Level 2 candidate</figcaption></figure></div></section>
+  <p class="home__cap">B.S. Management, Finance @ Tulane &middot; CFA Level 2 candidate</p>
+</div></div></section>
 <section id="about" class="view" role="tabpanel" aria-labelledby="t-about" hidden>
 <div class="about">
   <aside class="about__side">
@@ -230,8 +244,7 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
   </div>
 </div>
 <section class="car" data-carousel aria-roledescription="carousel" aria-label="Photos" tabindex="0">
-  <h3>A few photos</h3>
-  <div class="car__view"><ul class="car__track"><li class="car__slide"><img src="img/photo-01.jpg" width="420" height="300" alt="Selfie on a beach boardwalk with three friends"></li><li class="car__slide"><img src="img/photo-02.jpg" width="420" height="300" alt="Two dogs on a wood floor"></li><li class="car__slide"><img src="img/photo-03.jpg" width="420" height="300" alt="Graduation day downtown in cap and gown with family"></li><li class="car__slide"><img src="img/photo-04.jpg" width="420" height="300" alt="Friends posing with Santa at a mall"></li><li class="car__slide"><img src="img/photo-05.jpg" width="420" height="300" alt="Three friends outside a building at night"></li><li class="car__slide"><img src="img/photo-06.jpg" width="420" height="300" alt="Friends crowded together in a kitchen"></li><li class="car__slide"><img src="img/photo-07.jpg" width="420" height="300" alt="Two friends wearing Mardi Gras beads"></li><li class="car__slide"><img src="img/photo-08.jpg" width="420" height="300" alt="Holding a championship belt at an event"></li><li class="car__slide"><img src="img/photo-09.jpg" width="420" height="300" alt="Group in Halloween costumes"></li><li class="car__slide"><img src="img/photo-10.jpg" width="420" height="300" alt="Three friends smiling at a bar"></li><li class="car__slide"><img src="img/photo-11.jpg" width="420" height="300" alt="Five friends posing indoors"></li><li class="car__slide"><img src="img/photo-12.jpg" width="420" height="300" alt="Two people on an open field by the water"></li></ul></div>
+  <div class="car__view"><ul class="car__track"><li class="car__slide b"><img src="img/photo-01.jpg" width="420" height="300" alt="Selfie on a beach boardwalk with three friends"></li><li class="car__slide a"><img src="img/photo-02.jpg" width="420" height="300" alt="Two dogs on a wood floor"></li><li class="car__slide a2"><img src="img/photo-03.jpg" width="420" height="300" alt="Graduation day downtown in cap and gown with family"></li><li class="car__slide c"><img src="img/photo-04.jpg" width="420" height="300" alt="Friends posing with Santa at a mall"></li><li class="car__slide b"><img src="img/photo-05.jpg" width="420" height="300" alt="Three friends outside a building at night"></li><li class="car__slide c"><img src="img/photo-06.jpg" width="420" height="300" alt="Friends crowded together in a kitchen"></li><li class="car__slide b"><img src="img/photo-07.jpg" width="420" height="300" alt="Two friends wearing Mardi Gras beads"></li><li class="car__slide a"><img src="img/photo-08.jpg" width="420" height="300" alt="Holding a championship belt at an event"></li><li class="car__slide c"><img src="img/photo-09.jpg" width="420" height="300" alt="Group in Halloween costumes"></li><li class="car__slide b"><img src="img/photo-10.jpg" width="420" height="300" alt="Three friends smiling at a bar"></li><li class="car__slide c"><img src="img/photo-11.jpg" width="420" height="300" alt="Five friends posing indoors"></li><li class="car__slide a2"><img src="img/photo-12.jpg" width="420" height="300" alt="Two people on an open field by the water"></li></ul></div>
   <div class="car__bar">
     <button type="button" class="car__prev" aria-label="Previous photo">&larr;</button>
     <span class="car__count" aria-live="off"></span>
@@ -290,7 +303,7 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
   <h3 style="font:500 1.7rem var(--serif)">Trading algorithm</h3>
   <p class="proj__q">How do I combine my financial experience with technical ability, at scale?</p>
   <p class="proj__k">An automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day. The chosen strategy cleared a 95% confidence interval over a 10-year timeline.</p>
-  <div class="live" id="live" data-source="https://jlaprocido.github.io/AlgoSystem082026/">
+  <div class="live" id="live" data-source="https://jameslaprocido.com/AlgoSystem082026/">
     <div class="live__head"><span class="live__status" id="live-status">Latest snapshot</span><span id="live-time">Updated Oct 16, 2026</span></div>
     <dl class="live__grid">
       <div><dt>Equity</dt><dd data-key="Equity">$9,956.57</dd></div>
@@ -307,7 +320,7 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
     <li>The dashboard compares the strategy with AAPL buy-and-hold, and I publish the numbers whether or not it is ahead.</li>
   </ul>
   <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
-  <div class="actions"><a class="btn" href="https://jlaprocido.github.io/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a><a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a></div>
+  <div class="actions"><a class="btn" href="https://jameslaprocido.com/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a><a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a></div>
 </section>
 </section>
 <section id="contact" class="view" role="tabpanel" aria-labelledby="t-contact" hidden><p class="eyebrow">Contact</p><h2>Let's talk</h2>
@@ -368,10 +381,10 @@ document.querySelectorAll('[data-carousel]').forEach(c => {
   const track = c.querySelector('.car__track');
   const n = track.children.length;
   const count = c.querySelector('.car__count'), toggle = c.querySelector('.car__play');
-  const DELAY = 4500, DUR = 550, GAP = 14, EASE = 'cubic-bezier(.3,.7,.2,1)';
+  const DELAY = 4500, DUR = 550, EASE = 'cubic-bezier(.3,.7,.2,1)';
   let cur = 0, busy = false, timer = null, playing = !reduce, hovering = false;
 
-  const step = () => track.children[0].offsetWidth + GAP;
+  const step = () => track.children[1].offsetLeft - track.children[0].offsetLeft;
   const upd = () => { count.textContent = (cur + 1) + ' / ' + n; };
   function next() {
     if (busy) return;
