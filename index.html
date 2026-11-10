@@ -193,6 +193,84 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 }
 @media(max-width:520px){.about__side{grid-template-columns:1fr}.about__side img{max-width:220px}.view{padding-top:32px}}
 @media(prefers-reduced-motion:reduce){.xp__panel,.xp__chev,.js-pretext .xp__panel,.car__slide{transition:none}}
+
+/* Pill nav and soft cards, after designspells.com. */
+:root{--ink:#0f2e24;--paper:#f4f8f6;--panel:#fff;--rule:#d5e2dc;--muted:#4b5e66;--accent:#006747;--soft:#dcefe7;--btn:#006747;--btnink:#fff;--hero:#f4f8f6;color-scheme:light}
+body{background:radial-gradient(60rem 30rem at 90% -10%,rgba(113,197,232,.28),transparent 60%),radial-gradient(50rem 30rem at -10% 20%,rgba(0,103,71,.12),transparent 60%),var(--paper)}
+.top{position:fixed;top:.8rem;left:50%;transform:translateX(-50%);width:auto;max-width:calc(100vw - 1rem);background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--rule);border-radius:99px;box-shadow:0 .6rem 2rem rgba(15,46,36,.14);z-index:30}
+.top .wrap{max-width:none;padding:.2rem .45rem}
+.top__in{flex-wrap:nowrap;gap:0 6px}
+.brand{color:var(--ink);padding:0 .9rem;min-height:40px;font-size:1.05rem}
+.tabs{gap:2px}
+.tabs button{border:0;border-radius:99px;color:var(--muted);padding:.45rem .95rem;min-height:40px;transition:background .15s,color .15s}
+.tabs button:hover{background:rgba(0,0,0,.05);color:var(--ink)}
+.tabs button[aria-selected=true]{background:var(--accent);color:#fff}
+.top :focus-visible{outline-color:var(--accent)}
+main{border-bottom:0}
+.view{padding-top:6rem}
+.home{background:transparent;color:var(--ink);min-height:100svh;padding-top:5rem}
+.home__role{color:var(--accent);font:600 .85rem var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.home__name{text-transform:none;font-size:clamp(3rem,8vw,6.2rem);line-height:.95;white-space:normal;color:var(--ink);margin-bottom:22px}
+.home__sub{color:var(--ink);font:400 clamp(1.4rem,2.6vw,2rem)/1.25 var(--serif);max-width:22em;margin-bottom:28px}
+.home__cap{color:var(--muted)}
+.home .btn{background:var(--ink);color:#fff;border-color:var(--ink)}
+.home .btn--line{background:#fff;color:var(--ink);border-color:var(--rule)}
+.home .btn--line:hover{background:var(--soft);color:var(--ink)}
+.btn,.pnav a,.copy,.chips li{border-radius:99px}
+.btn{transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 .6rem 1.4rem rgba(0,103,71,.22);opacity:1}
+@media(min-width:861px){
+  .home__photo{top:6rem;bottom:3rem;right:clamp(18px,4vw,48px);width:42%;border-radius:1.6rem;overflow:hidden;box-shadow:0 2rem 4rem rgba(15,46,36,.28);transform:rotate(1.2deg);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .home__photo:hover{transform:rotate(0) scale(1.02)}
+  .home__photo img{-webkit-mask-image:none;mask-image:none;object-position:48% 40%}
+  .home__text{max-width:min(600px,52%)}
+}
+@media(max-width:860px){.home{padding-top:5rem}.home__photo{border-radius:1.2rem;overflow:hidden;margin:0 clamp(18px,4vw,48px);width:auto}.home__photo img{-webkit-mask-image:none;mask-image:none}.home__in{padding-top:28px}.brand{display:none}}
+.about__side img,.live,.stages,.facts,.report img{border-radius:1rem}
+.live,.stages,.xp,.proj{transition:transform .2s,box-shadow .2s}
+.live:hover,.stages:hover{box-shadow:0 .8rem 2rem rgba(15,46,36,.1)}
+.pnav a{transition:transform .15s,border-color .15s}.pnav a:hover{transform:translateY(-2px)}
+.proj{border-top:0;border-radius:1.2rem;background:var(--panel);padding:32px;margin-top:20px;border:1px solid var(--rule)}
+.xp:hover{background:rgba(255,255,255,.7)}
+.foot{background:transparent;box-shadow:none;clip-path:none;color:var(--muted);border-top:1px solid var(--rule)}
+.social a{color:var(--muted)}.social a:hover{color:var(--accent)}
+
+/* Inner pages */
+.view h2{font-size:clamp(2.2rem,4.4vw,3.2rem)}
+.proj__no{font:600 .78rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+/* About */
+.about__side img{transform:rotate(-1.5deg);box-shadow:0 1.4rem 3rem rgba(15,46,36,.2);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.about__side img:hover{transform:rotate(0) scale(1.02)}
+.facts{background:var(--panel);border:1px solid var(--rule);padding:4px 18px}
+.facts li:last-child{border-bottom:0}
+.thread{border-top:0;display:grid;gap:10px}
+.thread li{align-items:center;background:var(--panel);border:1px solid var(--rule);border-radius:1rem;padding:16px 20px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.thread li:hover{transform:translateY(-3px);box-shadow:0 .8rem 1.8rem rgba(15,46,36,.1);border-color:var(--accent)}
+.chips li{transition:transform .15s,border-color .15s}
+.chips li:hover{transform:translateY(-2px);border-color:var(--accent)}
+.car__slide{border-radius:1rem}
+/* Resume */
+.xps{border-top:0;display:grid;gap:12px}
+.xp{background:var(--panel);border:1px solid var(--rule);border-radius:1.1rem;padding:0 18px;transition:box-shadow .2s,border-color .2s}
+.xp:hover,.xp.is-open{border-color:var(--accent)}
+.xp:hover{box-shadow:0 .8rem 2rem rgba(15,46,36,.08)}
+.rmore>div{background:var(--panel);border:1px solid var(--rule);border-radius:1rem;padding:18px 20px}
+/* Projects */
+.pnav{position:sticky;top:4.6rem;z-index:5;background:rgba(244,248,246,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:8px 0;margin-bottom:24px}
+.proj{scroll-margin-top:7rem}
+.report{border-radius:.9rem;padding:16px 12px;transition:background .15s}
+.report:hover{background:rgba(0,103,71,.05)}
+/* Contact */
+#contact{max-width:760px;text-align:center}
+#contact .mail{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;font-size:clamp(1.5rem,4vw,2.4rem)}
+#contact .mail a{text-decoration:none;border-bottom:2px solid var(--accent)}
+.copy{margin-left:0;background:var(--panel);transition:background .15s,color .15s,border-color .15s}
+.copy.is-done{background:var(--accent);color:#fff;border-color:var(--accent)}
+#copy-msg{flex-basis:100%;text-align:center;min-height:1.4em}
+#contact .links{justify-content:center;gap:12px}
+#contact .links a{border:1px solid var(--rule);background:var(--panel);border-radius:99px;padding:0 24px;text-decoration:none;color:var(--ink);font-weight:500;transition:transform .15s,border-color .15s,color .15s}
+#contact .links a:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+@media(max-width:860px){.thread li{grid-template-columns:1fr}}
 </style>
 <noscript><style>[hidden]{display:block!important}.xp__panel{grid-template-rows:1fr!important}</style></noscript>
 </head>
@@ -234,9 +312,9 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
     <p>Before finance I played outside linebacker at Tulane, where we won the conference title and the Cotton Bowl. Forty hours a week of practice, film and travel on top of a finance degree taught me how to work to a schedule and show up when it is not fun. Now I'm applying that same work ethic to my career, and I'm aiming on going the distance.</p>
     <h3 class="sub">What I'm building on the side</h3>
     <ul class="thread">
-      <li><b><a href="#research" data-goto="research">Equity research</a></b><span>How do I become a better analyst?</span></li>
-      <li><b><a href="#gtm" data-goto="gtm">Go-to-market case study</a></b><span>How do I work out how to steer a business, and find the data to do it?</span></li>
       <li><b><a href="#trading" data-goto="trading">Trading algorithm</a></b><span>How do I combine my financial experience with technical ability, at scale?</span></li>
+      <li><b><a href="#gtm" data-goto="gtm">Go-to-market case study</a></b><span>How do I work out how to steer a business, and find the data to do it?</span></li>
+      <li><b><a href="#research" data-goto="research">Equity research</a></b><span>How do I become a better analyst?</span></li>
     </ul>
     <p class="note">These projects are my own work, done outside my role at Lightspeed.</p>
     <h3 class="sub">What I work with</h3>
@@ -267,40 +345,10 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
 </section>
 <section id="projects" class="view" role="tabpanel" aria-labelledby="t-projects" hidden>
 <p class="eyebrow">Projects</p><h2>Three questions, three projects</h2>
-<ul class="pnav"><li><a href="#research" data-goto="research">Equity research</a></li><li><a href="#gtm" data-goto="gtm">Go-to-market</a></li><li><a href="#trading" data-goto="trading">Trading algorithm</a></li></ul>
-
-<section class="proj" id="research">
-  <h3 style="font:500 1.7rem var(--serif)">Equity research</h3>
-  <p class="proj__q">How do I become a better analyst?</p>
-  <p class="proj__k">Three reports across a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
-  <ul class="reports">
-    <li class="report"><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/alphabet-googl.jpg" width="104" height="78" alt=""></a>
-      <div><h4><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener">Alphabet Inc. (GOOGL), April 2025</a></h4><p>Search growth, AI leadership, and a rising Cloud segment support the rating. 9 pages.</p></div>
-      <p class="report__v"><span class="report__big">Buy</span>$186 target, 13.8% upside</p></li>
-    <li class="report"><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/crowdstrike-lbo.jpg" width="104" height="78" alt=""></a>
-      <div><h4><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener">CrowdStrike (CRWD) LBO analysis, December 2024</a></h4><p>A buyout case for a high-growth cybersecurity leader after the July 2024 outage. 10 pages.</p></div>
-      <p class="report__v"><span class="report__big">$449.69</span>implied per share, 23% above market</p></li>
-    <li class="report"><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/newpark-nr.jpg" width="104" height="78" alt=""></a>
-      <div><h4><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener">Newpark Resources (NR), November 2024</a></h4><p>A Burkenroad Report on the exit from fluids and the refocus on Industrial Solutions. 32 pages.</p></div>
-      <p class="report__v"><span class="report__big">Outperform</span>$10 target</p></li>
-  </ul>
-</section>
-
-<section class="proj" id="gtm">
-  <h3 style="font:500 1.7rem var(--serif)">Go-to-market case study</h3>
-  <p class="proj__q">How do I work out how to steer a business, and find the data to do it?</p>
-  <p class="proj__k">A full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
-  <ol class="stages">
-    <li><h4>Learn</h4><p>Start from existing customers and segments to see who buys and why.</p></li>
-    <li><h4>Define</h4><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
-    <li><h4>Prove</h4><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
-    <li><h4>Compound</h4><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
-  </ol>
-  <p class="note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
-  <div class="actions" style="margin-top:16px"><a class="btn" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a></div>
-</section>
+<ul class="pnav"><li><a href="#trading" data-goto="trading">Trading algorithm</a></li><li><a href="#gtm" data-goto="gtm">Go-to-market</a></li><li><a href="#research" data-goto="research">Equity research</a></li></ul>
 
 <section class="proj" id="trading">
+  <p class="proj__no">Project 01</p>
   <h3 style="font:500 1.7rem var(--serif)">Trading algorithm</h3>
   <p class="proj__q">How do I combine my financial experience with technical ability, at scale?</p>
   <p class="proj__k">An automated paper-trading system that runs on a schedule, manages its own risk, and publishes its results every day. The chosen strategy cleared a 95% confidence interval over a 10-year timeline.</p>
@@ -323,10 +371,42 @@ h3{font:600 1.15rem/1.3 var(--sans);margin:0}
   <p class="stack">Built with Python, pandas, the Alpaca API, yfinance, GitHub Actions, and GitHub Pages.</p>
   <div class="actions"><a class="btn" href="https://jameslaprocido.com/AlgoSystem082026/" target="_blank" rel="noopener">Open live dashboard</a><a class="btn btn--line" href="https://github.com/jlaprocido/AlgoSystem082026" target="_blank" rel="noopener">View code on GitHub</a></div>
 </section>
+
+<section class="proj" id="gtm">
+  <p class="proj__no">Project 02</p>
+  <h3 style="font:500 1.7rem var(--serif)">Go-to-market case study</h3>
+  <p class="proj__q">How do I work out how to steer a business, and find the data to do it?</p>
+  <p class="proj__k">A full go-to-market pipeline, built end to end for the GTM head of an AI cybersecurity startup.</p>
+  <ol class="stages">
+    <li><h4>Learn</h4><p>Start from existing customers and segments to see who buys and why.</p></li>
+    <li><h4>Define</h4><p>Set the ideal customer profile for each segment and name the category to own.</p></li>
+    <li><h4>Prove</h4><p>Map the beliefs a buying committee needs before signing, and the proof for each, including SOC 2.</p></li>
+    <li><h4>Compound</h4><p>Trace every activity back to pipeline so each campaign teaches the next one.</p></li>
+  </ol>
+  <p class="note">Independent work from September 2026. The deck and the outbound GTM repo contain customer details, so I share them on request.</p>
+  <div class="actions" style="margin-top:16px"><a class="btn" href="mailto:jmjlaprocido@gmail.com?subject=Request%3A%20GTM%20case%20study%20deck%20and%20outbound%20repo">Request the deck and repo</a></div>
+</section>
+
+<section class="proj" id="research">
+  <p class="proj__no">Project 03</p>
+  <h3 style="font:500 1.7rem var(--serif)">Equity research</h3>
+  <p class="proj__q">How do I become a better analyst?</p>
+  <p class="proj__k">Three reports across a large-cap buy rating, a leveraged-buyout analysis, and a small-cap turnaround.</p>
+  <ul class="reports">
+    <li class="report"><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/alphabet-googl.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/alphabet-googl.pdf" target="_blank" rel="noopener">Alphabet Inc. (GOOGL), April 2025</a></h4><p>Search growth, AI leadership, and a rising Cloud segment support the rating. 9 pages.</p></div>
+      <p class="report__v"><span class="report__big">Buy</span>$186 target, 13.8% upside</p></li>
+    <li class="report"><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/crowdstrike-lbo.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/crowdstrike-lbo.pdf" target="_blank" rel="noopener">CrowdStrike (CRWD) LBO analysis, December 2024</a></h4><p>A buyout case for a high-growth cybersecurity leader after the July 2024 outage. 10 pages.</p></div>
+      <p class="report__v"><span class="report__big">$449.69</span>implied per share, 23% above market</p></li>
+    <li class="report"><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/img/newpark-nr.jpg" width="104" height="78" alt=""></a>
+      <div><h4><a href="assets/reports/newpark-nr.pdf" target="_blank" rel="noopener">Newpark Resources (NR), November 2024</a></h4><p>A Burkenroad Report on the exit from fluids and the refocus on Industrial Solutions. 32 pages.</p></div>
+      <p class="report__v"><span class="report__big">Outperform</span>$10 target</p></li>
+  </ul>
+</section>
 </section>
 <section id="contact" class="view" role="tabpanel" aria-labelledby="t-contact" hidden><p class="eyebrow">Contact</p><h2>Let's talk</h2>
-<p style="max-width:56ch">I'm open to conversations about general finance, automation, investments, and analytics roles.</p>
-<p class="mail"><a href="mailto:jmjlaprocido@gmail.com">jmjlaprocido@gmail.com</a><button class="copy" type="button" id="copy" data-email="jmjlaprocido@gmail.com">Copy email</button> <span id="copy-msg" role="status" style="font-size:.9rem;color:var(--muted);margin-left:8px"></span></p>
+<p class="mail"><a href="mailto:jmjlaprocido@gmail.com">jmjlaprocido@gmail.com</a><button class="copy" type="button" id="copy" data-email="jmjlaprocido@gmail.com">Copy email</button> <span id="copy-msg" role="status" style="font-size:.9rem;color:var(--muted)"></span></p>
 <p class="links"><a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/jlaprocido" target="_blank" rel="noopener">GitHub</a><a href="assets/resume.pdf" download>Resume</a></p></section>
 </main>
 <footer class="wrap foot"><span>&copy; 2026 James Laprocido. Last updated October 2026.</span><span class="social"><a href="https://github.com/jlaprocido" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="https://www.linkedin.com/in/jameslaprocido/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.54h.05c.53-1 1.83-2.04 3.77-2.04 4.03 0 4.78 2.65 4.78 6.1V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4z"/></svg></a><a href="mailto:jmjlaprocido@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20a1 1 0 011 1v12a1 1 0 01-1 1H2a1 1 0 01-1-1V6a1 1 0 011-1zm1.5 2v.4L12 13l8.5-5.6V7h-17zm17 2.8L12 15.4 3.5 9.8V17h17V9.8z"/></svg></a></span></footer>
@@ -518,10 +598,27 @@ setOpen(xps[0], true);
 
 /* ---------- Copy email ---------- */
 const copy = document.getElementById('copy'), msg = document.getElementById('copy-msg');
+const mailLink = document.querySelector('#contact .mail a');
 copy.addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(copy.dataset.email); msg.textContent = 'Copied'; }
-  catch { msg.textContent = 'Select and copy: ' + copy.dataset.email; }
-  setTimeout(() => { msg.textContent = ''; }, 2500);
+  const email = copy.dataset.email;
+  let ok = false;
+  try { await navigator.clipboard.writeText(email); ok = true; } catch (e) { /* blocked or unsupported: try the older route */ }
+  if (!ok) {
+    const ta = document.createElement('textarea');
+    ta.value = email; ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, email.length);
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    ta.remove();
+  }
+  if (ok) {
+    copy.textContent = 'Copied \u2713'; copy.classList.add('is-done'); msg.textContent = 'Email address copied.';
+  } else {
+    const r = document.createRange(); r.selectNodeContents(mailLink);
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    msg.textContent = 'Address selected. Press Ctrl+C (Cmd+C on Mac) to copy.';
+  }
+  setTimeout(() => { copy.textContent = 'Copy email'; copy.classList.remove('is-done'); msg.textContent = ''; }, 3000);
 });
 
 /* ---------- Live bot numbers: read the published dashboard, keep the snapshot on failure ---------- */
